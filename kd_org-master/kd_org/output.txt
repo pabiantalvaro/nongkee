@@ -1,0 +1,578 @@
+01.01 - Kedokteran:
+	 - 00:
+		 - Perumahsakitan, D3
+		 - Rehabilitasi Medik, D3
+		 - Ilmu Gizi, D4
+		 - Pendidikan Dokter, S1
+		 - Pendidikan Dokter, S1 Kls Internasional
+		 - Pendidikan Dokter, Profesi
+		 - Ilmu Biomedik, S2
+		 - Ilmu Gizi, S2
+		 - Kedokteran Kerja, S2
+		 - Ilmu Biomedik, S3
+		 - Ilmu Gizi, S3
+		 - Ilmu Kedokteran, S3
+		 - Anestesiologi dan Terapi Intensif, Spesialis 1
+		 - Ilmu Bedah, Spesialis 1
+		 - Ilmu Penyakit Dalam, Spesialis 1
+		 - Ilmu Kesehatan Anak, Spesialis 1
+		 - Obstetri dan Ginekologi, Spesialis 1
+		 - Neurologi, Spesialis 1
+		 - Ilmu Kedokteran Jiwa, Spesialis 1
+		 - Ilmu Kesehatan Mata, Spesialis 1
+		 - Dermatologi dan Venereologi, Spesialis 1
+		 - Ilmu Kesehatan Telinga Hidung Tenggorok, Bedah Kepala Leher, Spesialis 1
+		 - Ilmu Penyakit Jantung dan Pembuluh Darah, Spesialis 1
+		 - Pulmonologi dan Kedokteran Respirasi, Spesialis 1
+		 - Radiologi, Spesialis 1
+		 - Kedokteran Forensik dan Studi Medikolegal, Spesialis 1
+		 - Patologi Anatomik, Spesialis 1
+		 - Patologi Klinik, Spesialis 1
+		 - Orthopaedi dan Traumatologi, Spesialis 1
+		 - Urologi, Spesialis 1
+		 - Ilmu Bedah Saraf, Spesialis 1
+		 - Ilmu Kedokteran Fisik dan Rehabilitasi, Spesialis 1
+		 - Ilmu Bedah Plastik Rekonstruksi dan Estetik, Spesialis 1
+		 - Ilmu Kedokteran Olah Raga, Spesialis 1
+		 - Mikrobiologi Klinik, Spesialis 1
+		 - Farmakologi Klinik, Spesialis 1
+		 - Fisioterapi, D3
+		 - Okupasi Terapi, D3
+		 - Kedokteran Okupasi, Spesialis 1
+		 - Pendidikan Kedokteran, S2
+		 - Bedah Toraks, Kardiak dan Vaskular, Spesialis 1
+		 - Pendidikan Dokter, Profesi Kls Internasional
+		 - Onkologi Radiasi, Spesialis 1
+		 - Kedokteran Penerbangan, Spesialis 1
+		 - Ilmu Gizi Klinik, Spesialis 1
+		 - Parasitologi Klinik, Spesialis 1
+		 - Akupunktur Medik, Spesialis 1
+		 - Ilmu Penyakit Dalam, Spesialis 2
+		 - Kedokteran Klinis, S2
+		 - Ilmu Kesehatan Anak, Spesialis 2
+		 - Ilmu Bedah, Spesialis 2
+		 - Obstetri dan Ginekologi, Spesialis 2
+		 - Kedokteran Jiwa, Spesialis 2
+		 - Anestesiologi dan Terapi Intensif, Spesialis 2
+		 - Kedokteran Keluarga Layanan Primer, Spesialis 1
+		 - Orthopaedi dan Traumatologi, Spesialis 2
+		 - Urologi, Spesialis 2
+		 - Pendidikan Dokter Spesialis Kedokteran Emergensi, Spesialis 1
+		 - Jantung dan Pembuluh Darah, Spesialis 2
+		 - Ilmu Kesehatan Mata, Spesialis 2
+		 - Dermatologi Venereologi dan Estetika, Spesialis 2
+		 - Neurologi, Spesialis 2
+
+02.01 - Kedokteran Gigi:
+	 - 00:
+		 - Pendidikan Dokter Gigi, S1
+		 - Pendidikan Dokter Gigi, Profesi
+		 - Ilmu Kedokteran Gigi Dasar, S2
+		 - Ilmu Kedokteran Gigi Komunitas, S2
+		 - Ilmu Kedokteran Gigi, S3
+		 - Bedah Mulut dan Maksilofasial, Spesialis 1
+		 - Kedokteran Gigi Anak, Spesialis 1
+		 - Ilmu Konservasi Gigi, Spesialis 1
+		 - Ilmu Penyakit Mulut, Spesialis 1
+		 - Ortodonsia, Spesialis 1
+		 - Periodonsia, Spesialis 1
+		 - Prostodonsia, Spesialis 1
+		 - Pendidikan Dokter Gigi, S1 Kls Internasional
+		 - Radiologi Kedokteran Gigi, Spesialis 1
+		 - Odontologi Forensik, Spesialis 1
+		 - Pendidikan Dokter Gigi, Profesi Kls Internasional
+
+03.01 - Matematika dan Ilmu Pengetahuan Alam:
+	 - 01:
+		 - Matematika, S1
+		 - Matematika, S2
+		 - Matematika, S1 Paralel
+		 - Statistika, S1
+		 - Ilmu Aktuaria, S1
+		 - Statistika, S1 Paralel
+		 - Ilmu Aktuaria, S1 Paralel
+		 - Matematika, S3
+	 - 02:
+		 - Fisika Instrumentasi, D3
+		 - Fisika, S1
+		 - Fisika - Ekstensi, S1 Ekstensi
+		 - Ilmu Fisika, S2
+		 - Fisika, S1 Paralel
+		 - Geofisika, S1
+		 - Geologi, S1
+		 - Ilmu Fisika, S3
+		 - Geofisika, S1 Paralel
+		 - Geologi, S1 Paralel
+		 - Fisika Medis, S2
+		 - Fisikawan Medik, Profesi
+		 - Fisika, S1 Kls Internasional
+	 - 03:
+		 - Kimia Terapan, D3
+		 - Kimia, S1
+		 - Kimia - Ekstensi, S1 Ekstensi
+		 - Ilmu Kimia, S2
+		 - Ilmu Kimia, S3
+		 - Kimia, S1 Paralel
+		 - Kimia, S1 Kls Internasional
+	 - 04:
+		 - Biologi, S1
+		 - Biologi, S2
+		 - Ilmu Kelautan, S2
+		 - Biologi, S3
+		 - Biologi, S1 Paralel
+		 - Biologi, S1 Kls Internasional
+	 - 05:
+		 - Farmasi Rumah Sakit dan Distribusi Pemasaran, D3
+		 - Farmasi, S1
+		 - Farmasi - Ekstensi, S1 Ekstensi
+		 - Apoteker, Profesi
+		 - Ilmu Kefarmasian, S2
+		 - Farmasi, S1 Paralel
+		 - Ilmu Farmasi, S3
+		 - Herbal, S2
+	 - 06:
+		 - Geografi, S1
+		 - Geografi, S2
+		 - Ilmu Bahan-bahan/Material, S2
+		 - Ilmu Bahan-bahan/Material, S3
+		 - Geografi, S1 Paralel
+		 - Ilmu Geografi, S3
+
+04.01 - Teknik:
+	 - 00:
+		 - Insinyur, Profesi
+		 - Teknik Sistem Energi, S2
+		 - Perencanaan Wilayah dan Kota, S2
+	 - 01:
+		 - Teknik Sipil, S1
+		 - Teknik Lingkungan, S1
+		 - Teknik Sipil - Ekstensi, S1 Ekstensi
+		 - Teknik Sipil, S1 Kls Internasional
+		 - Teknik Sipil, S2
+		 - Teknik Sipil, S3
+		 - Teknik Sipil, S1 Paralel
+		 - Teknik Lingkungan, S1 Paralel
+		 - Teknik Lingkungan, S2
+		 - Teknik Lingkungan, S1 Kls Internasional
+	 - 02:
+		 - Teknik Mesin, S1
+		 - Teknik Perkapalan, S1
+		 - Teknik Mesin, S1 Ekstensi
+		 - Teknik Mesin, S1 Kls Internasional
+		 - Teknik Mesin, S2
+		 - Teknik Mesin, S3
+		 - Teknik Mesin, S1 Paralel
+		 - Teknik Perkapalan, S1 Paralel
+		 - Teknik Perkapalan, S1 Kls Internasional
+	 - 03:
+		 - Teknik Elektro, S1
+		 - Teknik Komputer, S1
+		 - Teknik Elektro - Ekstensi, S1 Ekstensi
+		 - Teknik Elektro, S1 Kls Internasional
+		 - Teknik Elektro, S2
+		 - Opto Elektroteknika dan Aplikasi Laser, S2
+		 - Opto Elektroteknika dan Aplikasi Laser, S3
+		 - Teknik Elektro, S3
+		 - Teknik Elektro, S2 Kls Internasional
+		 - Teknik Elektro, S1 Paralel
+		 - Teknologi Biomedis, S2
+		 - Teknik Biomedik, S1
+		 - Teknik Komputer, S1 Paralel
+		 - Teknik Biomedik, S1 Paralel
+		 - Teknik Komputer, S1 Kls Internasional
+	 - 04:
+		 - Teknik Metalurgi dan Material, S1
+		 - Teknik Metalurgi dan Material - Ekstensi, S1 Ekstensi
+		 - Teknik Metalurgi dan Material, S1 Kls Internasional
+		 - Teknik Metalurgi dan Material, S2
+		 - Teknik Metalurgi dan Material, S3
+		 - Teknik Metalurgi dan Material, S1 Paralel
+		 - Manajemen Integritas Material, S2
+	 - 05:
+		 - Arsitektur, S1
+		 - Arsitektur, S1 Ekstensi
+		 - Arsitektur, S2
+		 - Arsitektur, S1 Kls Internasional
+		 - Arsitektur Interior, S1
+		 - Arsitektur, S3
+		 - Arsitek, Profesi
+		 - Arsitektur, S1 Paralel
+		 - Arsitektur Interior, S1 Paralel
+		 - Arsitektur Interior, S1 Kls Internasional
+	 - 06:
+		 - Teknik Kimia, S1
+		 - Teknik Kimia - Ekstensi, S1 Ekstensi
+		 - Teknik Kimia, S1 Kls Internasional
+		 - Teknik Kimia, S2
+		 - Teknik Kimia, S3
+		 - Teknik Bioproses, S1
+		 - Teknik Kimia, S1 Paralel
+		 - Teknik Bioproses, S1 Kls Internasional
+		 - Teknik Bioproses, S1 Paralel
+		 - Teknik Bioproses, S2
+	 - 07:
+		 - Teknik Industri, S1
+		 - Teknik Industri - Ekstensi, S1 Ekstensi
+		 - Teknik Industri, S2
+		 - Teknik Industri, S1 Paralel
+		 - Teknik Industri, S3
+		 - Teknik Industri, S1 Kls Internasional
+
+05.01 - Hukum:
+	 - 00:
+		 - Ilmu Hukum, S1
+		 - Ilmu Hukum - Ekstensi, S1 Ekstensi
+		 - Ilmu Hukum, S2
+		 - Kenotariatan, S2
+		 - Ilmu Hukum, S3
+		 - Ilmu Hukum, S1 Paralel
+		 - Ilmu Hukum, S1 Kls Internasional
+
+06.01 - Ekonomi dan Bisnis:
+	 - 01:
+		 - Ilmu Ekonomi, S1
+		 - Ilmu Ekonomi, S1 Kls Internasional
+		 - Ilmu Ekonomi, S2
+		 - Magister Perencanaan Ekonomi dan Kebijakan Pembangunan, S2
+		 - Ilmu Ekonomi, S3
+		 - Ilmu Ekonomi, S2 Kls Internasional
+		 - Ilmu Ekonomi Islam, S1
+		 - Bisnis Islam, S1
+		 - Magister Ekonomi Kependudukan dan Ketenagakerjaan, S2
+		 - Ilmu Ekonomi Islam, S1 Kls Internasional
+		 - Bisnis Islam, S1 Kls Internasional
+	 - 02:
+		 - Manajemen, S1
+		 - Manajemen, S1 Kls Internasional
+		 - Manajemen, S1 Ekstensi
+		 - Ilmu Manajemen, S2
+		 - Magister Manajemen, S2
+		 - Ilmu Manajemen, S3
+		 - Magister Manajemen, S2
+	 - 03:
+		 - Akuntansi, D3
+		 - Akuntansi, S1
+		 - Akuntansi, S1 Ekstensi
+		 - Akuntansi, S1 Kls Internasional
+		 - Profesi Akuntan, Profesi
+		 - Magister Akuntansi, S2
+		 - Ilmu Akuntansi, S2
+		 - Ilmu Akuntansi, S3
+		 - Magister Akuntansi, S2
+		 - Akuntansi, S1 Paralel
+
+07.01 - Ilmu Pengetahuan Budaya:
+	 - 00:
+		 - Bahasa Cina, D3
+		 - Bahasa Arab, D3
+		 - Bahasa Jepang, D3
+		 - Bahasa Inggris, D3
+		 - Bahasa Perancis, D3
+		 - Bahasa Jerman, D3
+		 - Bahasa Belanda, D3
+		 - Sastra Arab, S1
+		 - Sastra Indonesia, S1
+		 - Sastra Daerah untuk Sastra Jawa, S1
+		 - Sastra Cina, S1
+		 - Sastra Jepang, S1
+		 - Sastra Inggris, S1
+		 - Sastra Perancis, S1
+		 - Sastra Jerman, S1
+		 - Sastra Rusia, S1
+		 - Sastra Belanda, S1
+		 - Bahasa dan Kebudayaan Korea, S1
+		 - Sastra Cina, S1 Paralel
+		 - Sastra Arab, S1 Paralel
+		 - Sastra Jepang, S1 Paralel
+		 - Sastra Inggris, S1 Paralel
+		 - Sastra Perancis, S1 Paralel
+		 - Sastra Jerman, S1 Paralel
+		 - Sastra Belanda, S1 Paralel
+		 - Bahasa dan Kebudayaan Korea, S1 Paralel
+		 - Asia Tenggara, S2
+		 - Asia Timur, S2
+		 - Sastra Indonesia, S1 Paralel
+		 - Sastra Daerah untuk Sastra Jawa, S1 Paralel
+		 - Sastra Rusia, S1 Paralel
+		 - Sastra Arab, S1 Kls Internasional
+	 - 01:
+		 - Arkeologi, S1
+		 - Arkeologi, S2
+		 - Arkeologi, S3
+		 - Arkeologi, S1 Paralel
+	 - 02:
+		 - Ilmu Filsafat, S1
+		 - Filsafat, S2
+		 - Ilmu Filsafat, S3
+		 - Ilmu Filsafat, S1 Paralel
+	 - 03:
+		 - Manajemen Informasi dan Dokumen, D3
+		 - Ilmu Perpustakaan, S1
+		 - Ilmu Perpustakaan, S2
+		 - Ilmu Perpustakaan, S1 Ekstensi
+		 - Ilmu Perpustakaan, S1 Paralel
+		 - Kajian Informasi, S3
+	 - 04:
+		 - Ilmu Linguistik, S2
+		 - Ilmu Linguistik, S3
+	 - 05:
+		 - Ilmu Susastra, S2
+		 - Ilmu Susastra, S3
+	 - 06:
+		 - Ilmu Sejarah, S1
+		 - Ilmu Sejarah, S2
+		 - Ilmu Sejarah, S3
+		 - Ilmu Sejarah, S1 Paralel
+
+08.01 - Psikologi:
+	 - 00:
+		 - Psikologi, S1
+		 - Psikologi, S1 Kls Internasional
+		 - Psikologi, S1 Ekstensi
+		 - Psikologi, S2
+		 - Psikologi, S3
+		 - Psikologi Profesi, S2
+		 - Psikologi, S1 Paralel
+		 - Psikologi Terapan, S2
+		 - Pendidikan Profesi Psikologi, Profesi
+
+09.01 - Ilmu Sosial dan Ilmu Politik:
+	 - 01:
+		 - Komunikasi, D3
+		 - Ilmu Komunikasi, S1
+		 - Ilmu Komunikasi - Ekstensi, S1 Ekstensi
+		 - Ilmu Komunikasi, S2
+		 - Ilmu Komunikasi, S3
+		 - Ilmu Komunikasi, S1 Paralel
+		 - Ilmu Komunikasi, S1 Kls Internasional
+	 - 02:
+		 - Ilmu Politik, S1
+		 - Ilmu Politik, S1 Ekstensi
+		 - Ilmu Politik, S2
+		 - Ilmu Politik, S3
+		 - Ilmu Politik, S1 Paralel
+	 - 03:
+		 - Administrasi Asuransi dan Aktuaria, D3
+		 - Administrasi Keuangan dan Perbankan, D3
+		 - Administrasi Perkantoran dan Sekretaris, D3
+		 - Administrasi Perpajakan, D3
+		 - Ilmu Administrasi Fiskal, S1
+		 - Ilmu Administrasi Negara, S1
+		 - Ilmu Administrasi Niaga, S1
+		 - Ilmu Administrasi Fiskal, S1 Ekstensi
+		 - Ilmu Administrasi Negara, S1 Ekstensi
+		 - Ilmu Administrasi Niaga, S1 Ekstensi
+		 - Ilmu Administrasi, S2
+		 - Ilmu Administrasi, S3
+		 - Ilmu Administrasi Fiskal, S1 Paralel
+		 - Ilmu Administrasi Negara, S1 Paralel
+		 - Ilmu Administrasi Niaga, S1 Paralel
+	 - 04:
+		 - Sosiologi, S1
+		 - Sosiologi, S2
+		 - Sosiologi, S3
+		 - Sosiologi, S1 Paralel
+	 - 05:
+		 - Kriminologi, S1
+		 - Kriminologi - Ekstensi, S1 Ekstensi
+		 - Kriminologi, S2
+		 - Kriminologi, S3
+		 - Kriminologi, S1 Paralel
+		 - Kriminologi, S1 Kls Internasional
+	 - 06:
+		 - Ilmu Kesejahteraan Sosial, S1
+		 - Ilmu Kesejahteraan Sosial, S2
+		 - Ilmu Kesejahteraan Sosial, S3
+		 - Ilmu Kesejahteraan Sosial, S1 Paralel
+	 - 07:
+		 - Pariwisata, D3
+		 - Antropologi Sosial, S1
+		 - Antropologi, S2
+		 - Antropologi, S3
+		 - Antropologi Sosial, S1 Paralel
+		 - Antropologi Sosial, S1 Ekstensi
+	 - 08:
+		 - Ilmu Hubungan Internasional, S1
+		 - Ilmu Hubungan Internasional, S2
+		 - Kajian Terorisme dalam Keamanan Internasional, S2
+		 - Ilmu Hubungan Internasional, S1 Paralel
+		 - Ilmu Hubungan Internasional, S1 Ekstensi
+		 - Hubungan Internasional, S3
+		 - Ilmu Hubungan Internasional, S1 Kls Internasional
+
+10.01 - Kesehatan Masyarakat:
+	 - 00:
+		 - Kesehatan Masyarakat, S1
+		 - Kesehatan Masyarakat, S1 Ekstensi
+		 - Ilmu Kesehatan Masyarakat, S2
+		 - Ilmu Kesehatan Masyarakat, S2 Kls Internasional
+		 - Ilmu Kesehatan Masyarakat, S3
+		 - Kesehatan Lingkungan, S1
+		 - Kesehatan Masyarakat, S1 Paralel
+		 - Kesehatan Lingkungan, S1 Paralel
+	 - 01:
+		 - Asuransi Kesehatan, D3
+		 - Manajemen Informasi Kesehatan dan Rekam Medis, D3
+		 - Manajemen Pelayanan Rumah Sakit, D3
+		 - Administrasi Rumah Sakit, S2
+	 - 03:
+		 - Epidemiologi, S2
+		 - Epidemiologi, S3
+	 - 04:
+		 - Gizi, S1
+		 - Gizi, S1 Paralel
+	 - 06:
+		 - Keselamatan dan Kesehatan Kerja, D3
+		 - Keselamatan dan Kesehatan Kerja, S2
+		 - Keselamatan dan Kesehatan Kerja, S1
+		 - Keselamatan dan Kesehatan Kerja, S1 Paralel
+	 - 07:
+		 - Kehumasan Pelayanan Kesehatan, D3
+		 - Promosi dan Pendidikan Kesehatan, D3
+
+12.01 - Ilmu Komputer:
+	 - 00:
+		 - Ilmu Komputer, S1
+		 - Ilmu Komputer, S1 Kls Internasional
+		 - Ilmu Komputer, S2
+		 - Teknologi Informasi, S2
+		 - Ilmu Komputer, S3
+		 - Sistem Informasi, S1
+		 - Sistem Informasi - Ekstensi, S1 Ekstensi
+		 - Sistem Informasi, S1 Paralel
+		 - Ilmu Komputer, S1 Paralel
+		 - Kecerdasan Artifisial, S1
+
+13.01 - Ilmu Keperawatan:
+	 - 00:
+		 - Ilmu Keperawatan, S1
+		 - Ilmu Keperawatan, S1 Ekstensi
+		 - Profesi Ners, Profesi
+		 - Ilmu Keperawatan, S2
+		 - Spesialis Keperawatan Komunitas, Spesialis 1
+		 - Spesialis Keperawatan Maternitas, Spesialis 1
+		 - Spesialis Keperawatan Medikal Bedah, Spesialis 1
+		 - Spesialis Keperawatan Jiwa, Spesialis 1
+		 - Ilmu Keperawatan, S3
+		 - Spesialis Keperawatan Anak, Spesialis 1
+		 - Spesialis Keperawatan Onkologi, Spesialis 1
+		 - Ilmu Keperawatan, S1 Paralel
+		 - Ilmu Keperawatan, S1 Kls Internasional
+
+14.01 - Pascasarjana:
+	 - 00:
+		 - Kajian Ilmu Kepolisian, S2
+		 - Kajian Ilmu Lingkungan, S2
+		 - Kajian Kependudukan & Ketenagaan Kerja, S2
+		 - Kajian Ketahanan Nasional, S2
+		 - Kajian Pengembangan Perkotaan, S2
+		 - Kajian Gender, S2
+		 - Kajian Wilayah Amerika, S2
+		 - Kajian Wilayah Eropa, S2
+		 - Kajian Wilayah Jepang, S2
+		 - Kajian Wilayah Timur Tengah Islam, S2
+		 - Ilmu Lingkungan, S3
+		 - Teknologi Biomedis, S2
+
+15.01 - Pendidikan Vokasi:
+	 - 00:
+		 - Administrasi Rumah Sakit, D3
+		 - Fisioterapi, D3
+		 - Okupasi Terapi, D3
+		 - Akuntansi, D3
+		 - Manajemen Rekod dan Arsip, D3
+		 - Hubungan Masyarakat, D3
+		 - Administrasi Asuransi dan Aktuaria, D3
+		 - Administrasi Keuangan dan Perbankan, D3
+		 - Administrasi Perkantoran, D3
+		 - Administrasi Perpajakan, D3
+		 - Pariwisata, D3
+		 - Periklanan Kreatif, D3
+		 - Penyiaran Multimedia, D3
+	 - 01:
+		 - Manajemen Bisnis Pariwisata, D4
+		 - Manajemen Rekod dan Arsip, D4
+		 - Bisnis Kreatif, D4
+		 - Produksi Media, D4
+		 - Fisioterapi, D4
+		 - Terapi Okupasi, D4
+	 - 02:
+		 - Industri Kreatif, S2 Terapan
+
+17.01 - Farmasi:
+	 - 00:
+		 - Farmasi, S1
+		 - Farmasi, S1 Paralel
+		 - Apoteker, Profesi
+		 - Ilmu Kefarmasian, S2
+		 - Herbal, S2
+		 - Ilmu Farmasi, S3
+
+18.01 - Ilmu Administrasi:
+	 - 00:
+		 - Ilmu Administrasi Fiskal, S1
+		 - Ilmu Administrasi Negara, S1
+		 - Ilmu Administrasi Niaga, S1
+		 - Ilmu Administrasi Fiskal, S1 Paralel
+		 - Ilmu Administrasi Negara, S1 Paralel
+		 - Ilmu Administrasi Niaga, S1 Paralel
+		 - Ilmu Administrasi Fiskal, S1 Ekstensi
+		 - Ilmu Administrasi Negara, S1 Ekstensi
+		 - Ilmu Administrasi Niaga, S1 Ekstensi
+		 - Ilmu Administrasi, S2
+		 - Ilmu Administrasi, S3
+		 - Kebijakan Publik dan Governansi, S2
+		 - Ilmu Administrasi Fiskal, S1 Kls Internasional
+		 - Ilmu Administrasi Negara, S1 Kls Internasional
+		 - Ilmu Administrasi Niaga, S1 Kls Internasional
+
+19.01 - Pascasarjana Pembangunan Berkelanjutan:
+	 - 00:
+		 - Ilmu Lingkungan, S2
+		 - Ilmu Lingkungan, S3
+		 - Manajemen Bencana, S2
+
+20.01 - Pascasarjana Pembangunan Berkelanjutan:
+	 - 00:
+		 - Kajian Ketahanan Nasional, S2
+		 - Kajian Ilmu Kepolisian, S2
+		 - Kajian Gender, S2
+		 - Kajian Wilayah Amerika, S2
+		 - Kajian Wilayah Eropa, S2
+		 - Kajian Wilayah Jepang, S2
+		 - Kajian Wilayah Timur Tengah dan Islam, S2
+		 - Kajian Pengembangan Perkotaan, S2
+		 - Kajian Terorisme, S2
+		 - Kajian Stratejik dan Global, S3
+
+21.01 - Pascasarjana Pembangunan Berkelanjutan:
+	 - 00:
+		 - Ilmu Lingkungan, S3
+		 - Kajian Stratejik dan Global, S3
+	 - 01:
+		 - Ilmu Lingkungan, S2
+		 - Manajemen Bencana, S2
+	 - 02:
+		 - Kajian Ketahanan Nasional, S2
+		 - Kajian Gender, S2
+		 - Kajian Ilmu Kepolisian, S2
+		 - Kajian Terorisme, S2
+	 - 03:
+		 - Kajian Pengembangan Perkotaan, S2
+		 - Kajian Wilayah Jepang, S2
+		 - Kajian Wilayah Timur Tengah dan Islam, S2
+		 - Kajian Wilayah Eropa, S2
+		 - Kajian Wilayah Amerika, S2
+
+51.01 - Rumah Sakit Jantung dan Pembuluh Darah Harapan Kita:
+	 - 00:
+		 - Jantung dan Pembuluh Darah, Spesialis 1
+
+52.01 - Rumah Sakit Anak dan Bunda Harapan Kita:
+	 - 00:
+		 - Ilmu Kesehatan Anak, Spesialis 1
+
+53.01 - Rumah Sakit Kanker Dharmais:
+	 - 00:
+		 - Onkologi Radiasi, Spesialis 1
+

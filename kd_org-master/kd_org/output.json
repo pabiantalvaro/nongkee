@@ -1,0 +1,2086 @@
+{
+    "01.01": {
+        "name": "Kedokteran",
+        "00": [
+            {
+                "code": "01.00.01.01",
+                "name": "Perumahsakitan, D3"
+            },
+            {
+                "code": "02.00.01.01",
+                "name": "Rehabilitasi Medik, D3"
+            },
+            {
+                "code": "03.00.01.01",
+                "name": "Ilmu Gizi, D4"
+            },
+            {
+                "code": "04.00.01.01",
+                "name": "Pendidikan Dokter, S1"
+            },
+            {
+                "code": "05.00.01.01",
+                "name": "Pendidikan Dokter, S1 Kls Internasional"
+            },
+            {
+                "code": "06.00.01.01",
+                "name": "Pendidikan Dokter, Profesi"
+            },
+            {
+                "code": "07.00.01.01",
+                "name": "Ilmu Biomedik, S2"
+            },
+            {
+                "code": "08.00.01.01",
+                "name": "Ilmu Gizi, S2"
+            },
+            {
+                "code": "09.00.01.01",
+                "name": "Kedokteran Kerja, S2"
+            },
+            {
+                "code": "10.00.01.01",
+                "name": "Ilmu Biomedik, S3"
+            },
+            {
+                "code": "11.00.01.01",
+                "name": "Ilmu Gizi, S3"
+            },
+            {
+                "code": "12.00.01.01",
+                "name": "Ilmu Kedokteran, S3"
+            },
+            {
+                "code": "13.00.01.01",
+                "name": "Anestesiologi dan Terapi Intensif, Spesialis 1"
+            },
+            {
+                "code": "14.00.01.01",
+                "name": "Ilmu Bedah, Spesialis 1"
+            },
+            {
+                "code": "15.00.01.01",
+                "name": "Ilmu Penyakit Dalam, Spesialis 1"
+            },
+            {
+                "code": "16.00.01.01",
+                "name": "Ilmu Kesehatan Anak, Spesialis 1"
+            },
+            {
+                "code": "17.00.01.01",
+                "name": "Obstetri dan Ginekologi, Spesialis 1"
+            },
+            {
+                "code": "18.00.01.01",
+                "name": "Neurologi, Spesialis 1"
+            },
+            {
+                "code": "19.00.01.01",
+                "name": "Ilmu Kedokteran Jiwa, Spesialis 1"
+            },
+            {
+                "code": "20.00.01.01",
+                "name": "Ilmu Kesehatan Mata, Spesialis 1"
+            },
+            {
+                "code": "21.00.01.01",
+                "name": "Dermatologi dan Venereologi, Spesialis 1"
+            },
+            {
+                "code": "22.00.01.01",
+                "name": "Ilmu Kesehatan Telinga Hidung Tenggorok, Bedah Kepala Leher, Spesialis 1"
+            },
+            {
+                "code": "23.00.01.01",
+                "name": "Ilmu Penyakit Jantung dan Pembuluh Darah, Spesialis 1"
+            },
+            {
+                "code": "24.00.01.01",
+                "name": "Pulmonologi dan Kedokteran Respirasi, Spesialis 1"
+            },
+            {
+                "code": "25.00.01.01",
+                "name": "Radiologi, Spesialis 1"
+            },
+            {
+                "code": "26.00.01.01",
+                "name": "Kedokteran Forensik dan Studi Medikolegal, Spesialis 1"
+            },
+            {
+                "code": "27.00.01.01",
+                "name": "Patologi Anatomik, Spesialis 1"
+            },
+            {
+                "code": "28.00.01.01",
+                "name": "Patologi Klinik, Spesialis 1"
+            },
+            {
+                "code": "29.00.01.01",
+                "name": "Orthopaedi dan Traumatologi, Spesialis 1"
+            },
+            {
+                "code": "30.00.01.01",
+                "name": "Urologi, Spesialis 1"
+            },
+            {
+                "code": "31.00.01.01",
+                "name": "Ilmu Bedah Saraf, Spesialis 1"
+            },
+            {
+                "code": "32.00.01.01",
+                "name": "Ilmu Kedokteran Fisik dan Rehabilitasi, Spesialis 1"
+            },
+            {
+                "code": "33.00.01.01",
+                "name": "Ilmu Bedah Plastik Rekonstruksi dan Estetik, Spesialis 1"
+            },
+            {
+                "code": "34.00.01.01",
+                "name": "Ilmu Kedokteran Olah Raga, Spesialis 1"
+            },
+            {
+                "code": "35.00.01.01",
+                "name": "Mikrobiologi Klinik, Spesialis 1"
+            },
+            {
+                "code": "36.00.01.01",
+                "name": "Farmakologi Klinik, Spesialis 1"
+            },
+            {
+                "code": "37.00.01.01",
+                "name": "Fisioterapi, D3"
+            },
+            {
+                "code": "38.00.01.01",
+                "name": "Okupasi Terapi, D3"
+            },
+            {
+                "code": "39.00.01.01",
+                "name": "Kedokteran Okupasi, Spesialis 1"
+            },
+            {
+                "code": "40.00.01.01",
+                "name": "Pendidikan Kedokteran, S2"
+            },
+            {
+                "code": "41.00.01.01",
+                "name": "Bedah Toraks, Kardiak dan Vaskular, Spesialis 1"
+            },
+            {
+                "code": "42.00.01.01",
+                "name": "Pendidikan Dokter, Profesi Kls Internasional"
+            },
+            {
+                "code": "43.00.01.01",
+                "name": "Onkologi Radiasi, Spesialis 1"
+            },
+            {
+                "code": "44.00.01.01",
+                "name": "Kedokteran Penerbangan, Spesialis 1"
+            },
+            {
+                "code": "45.00.01.01",
+                "name": "Ilmu Gizi Klinik, Spesialis 1"
+            },
+            {
+                "code": "46.00.01.01",
+                "name": "Parasitologi Klinik, Spesialis 1"
+            },
+            {
+                "code": "47.00.01.01",
+                "name": "Akupunktur Medik, Spesialis 1"
+            },
+            {
+                "code": "48.00.01.01",
+                "name": "Ilmu Penyakit Dalam, Spesialis 2"
+            },
+            {
+                "code": "49.00.01.01",
+                "name": "Kedokteran Klinis, S2"
+            },
+            {
+                "code": "50.00.01.01",
+                "name": "Ilmu Kesehatan Anak, Spesialis 2"
+            },
+            {
+                "code": "51.00.01.01",
+                "name": "Ilmu Bedah, Spesialis 2"
+            },
+            {
+                "code": "52.00.01.01",
+                "name": "Obstetri dan Ginekologi, Spesialis 2"
+            },
+            {
+                "code": "53.00.01.01",
+                "name": "Kedokteran Jiwa, Spesialis 2"
+            },
+            {
+                "code": "54.00.01.01",
+                "name": "Anestesiologi dan Terapi Intensif, Spesialis 2"
+            },
+            {
+                "code": "55.00.01.01",
+                "name": "Kedokteran Keluarga Layanan Primer, Spesialis 1"
+            },
+            {
+                "code": "56.00.01.01",
+                "name": "Orthopaedi dan Traumatologi, Spesialis 2"
+            },
+            {
+                "code": "57.00.01.01",
+                "name": "Urologi, Spesialis 2"
+            },
+            {
+                "code": "58.00.01.01",
+                "name": "Pendidikan Dokter Spesialis Kedokteran Emergensi, Spesialis 1"
+            },
+            {
+                "code": "59.00.01.01",
+                "name": "Jantung dan Pembuluh Darah, Spesialis 2"
+            },
+            {
+                "code": "60.00.01.01",
+                "name": "Ilmu Kesehatan Mata, Spesialis 2"
+            },
+            {
+                "code": "61.00.01.01",
+                "name": "Dermatologi Venereologi dan Estetika, Spesialis 2"
+            },
+            {
+                "code": "62.00.01.01",
+                "name": "Neurologi, Spesialis 2"
+            }
+        ]
+    },
+    "02.01": {
+        "name": "Kedokteran Gigi",
+        "00": [
+            {
+                "code": "01.00.02.01",
+                "name": "Pendidikan Dokter Gigi, S1"
+            },
+            {
+                "code": "02.00.02.01",
+                "name": "Pendidikan Dokter Gigi, Profesi"
+            },
+            {
+                "code": "03.00.02.01",
+                "name": "Ilmu Kedokteran Gigi Dasar, S2"
+            },
+            {
+                "code": "04.00.02.01",
+                "name": "Ilmu Kedokteran Gigi Komunitas, S2"
+            },
+            {
+                "code": "05.00.02.01",
+                "name": "Ilmu Kedokteran Gigi, S3"
+            },
+            {
+                "code": "06.00.02.01",
+                "name": "Bedah Mulut dan Maksilofasial, Spesialis 1"
+            },
+            {
+                "code": "07.00.02.01",
+                "name": "Kedokteran Gigi Anak, Spesialis 1"
+            },
+            {
+                "code": "08.00.02.01",
+                "name": "Ilmu Konservasi Gigi, Spesialis 1"
+            },
+            {
+                "code": "09.00.02.01",
+                "name": "Ilmu Penyakit Mulut, Spesialis 1"
+            },
+            {
+                "code": "10.00.02.01",
+                "name": "Ortodonsia, Spesialis 1"
+            },
+            {
+                "code": "11.00.02.01",
+                "name": "Periodonsia, Spesialis 1"
+            },
+            {
+                "code": "12.00.02.01",
+                "name": "Prostodonsia, Spesialis 1"
+            },
+            {
+                "code": "13.00.02.01",
+                "name": "Pendidikan Dokter Gigi, S1 Kls Internasional"
+            },
+            {
+                "code": "14.00.02.01",
+                "name": "Radiologi Kedokteran Gigi, Spesialis 1"
+            },
+            {
+                "code": "15.00.02.01",
+                "name": "Odontologi Forensik, Spesialis 1"
+            },
+            {
+                "code": "16.00.02.01",
+                "name": "Pendidikan Dokter Gigi, Profesi Kls Internasional"
+            }
+        ]
+    },
+    "03.01": {
+        "name": "Matematika dan Ilmu Pengetahuan Alam",
+        "01": [
+            {
+                "code": "01.01.03.01",
+                "name": "Matematika, S1"
+            },
+            {
+                "code": "02.01.03.01",
+                "name": "Matematika, S2"
+            },
+            {
+                "code": "03.01.03.01",
+                "name": "Matematika, S1 Paralel"
+            },
+            {
+                "code": "04.01.03.01",
+                "name": "Statistika, S1"
+            },
+            {
+                "code": "05.01.03.01",
+                "name": "Ilmu Aktuaria, S1"
+            },
+            {
+                "code": "06.01.03.01",
+                "name": "Statistika, S1 Paralel"
+            },
+            {
+                "code": "07.01.03.01",
+                "name": "Ilmu Aktuaria, S1 Paralel"
+            },
+            {
+                "code": "08.01.03.01",
+                "name": "Matematika, S3"
+            }
+        ],
+        "02": [
+            {
+                "code": "01.02.03.01",
+                "name": "Fisika Instrumentasi, D3"
+            },
+            {
+                "code": "02.02.03.01",
+                "name": "Fisika, S1"
+            },
+            {
+                "code": "03.02.03.01",
+                "name": "Fisika - Ekstensi, S1 Ekstensi"
+            },
+            {
+                "code": "04.02.03.01",
+                "name": "Ilmu Fisika, S2"
+            },
+            {
+                "code": "05.02.03.01",
+                "name": "Fisika, S1 Paralel"
+            },
+            {
+                "code": "06.02.03.01",
+                "name": "Geofisika, S1"
+            },
+            {
+                "code": "07.02.03.01",
+                "name": "Geologi, S1"
+            },
+            {
+                "code": "08.02.03.01",
+                "name": "Ilmu Fisika, S3"
+            },
+            {
+                "code": "09.02.03.01",
+                "name": "Geofisika, S1 Paralel"
+            },
+            {
+                "code": "10.02.03.01",
+                "name": "Geologi, S1 Paralel"
+            },
+            {
+                "code": "11.02.03.01",
+                "name": "Fisika Medis, S2"
+            },
+            {
+                "code": "12.02.03.01",
+                "name": "Fisikawan Medik, Profesi"
+            },
+            {
+                "code": "13.02.03.01",
+                "name": "Fisika, S1 Kls Internasional"
+            }
+        ],
+        "03": [
+            {
+                "code": "01.03.03.01",
+                "name": "Kimia Terapan, D3"
+            },
+            {
+                "code": "02.03.03.01",
+                "name": "Kimia, S1"
+            },
+            {
+                "code": "03.03.03.01",
+                "name": "Kimia - Ekstensi, S1 Ekstensi"
+            },
+            {
+                "code": "04.03.03.01",
+                "name": "Ilmu Kimia, S2"
+            },
+            {
+                "code": "05.03.03.01",
+                "name": "Ilmu Kimia, S3"
+            },
+            {
+                "code": "06.03.03.01",
+                "name": "Kimia, S1 Paralel"
+            },
+            {
+                "code": "07.03.03.01",
+                "name": "Kimia, S1 Kls Internasional"
+            }
+        ],
+        "04": [
+            {
+                "code": "01.04.03.01",
+                "name": "Biologi, S1"
+            },
+            {
+                "code": "02.04.03.01",
+                "name": "Biologi, S2"
+            },
+            {
+                "code": "03.04.03.01",
+                "name": "Ilmu Kelautan, S2"
+            },
+            {
+                "code": "04.04.03.01",
+                "name": "Biologi, S3"
+            },
+            {
+                "code": "05.04.03.01",
+                "name": "Biologi, S1 Paralel"
+            },
+            {
+                "code": "06.04.03.01",
+                "name": "Biologi, S1 Kls Internasional"
+            }
+        ],
+        "05": [
+            {
+                "code": "01.05.03.01",
+                "name": "Farmasi Rumah Sakit dan Distribusi Pemasaran, D3"
+            },
+            {
+                "code": "02.05.03.01",
+                "name": "Farmasi, S1"
+            },
+            {
+                "code": "03.05.03.01",
+                "name": "Farmasi - Ekstensi, S1 Ekstensi"
+            },
+            {
+                "code": "04.05.03.01",
+                "name": "Apoteker, Profesi"
+            },
+            {
+                "code": "05.05.03.01",
+                "name": "Ilmu Kefarmasian, S2"
+            },
+            {
+                "code": "06.05.03.01",
+                "name": "Farmasi, S1 Paralel"
+            },
+            {
+                "code": "07.05.03.01",
+                "name": "Ilmu Farmasi, S3"
+            },
+            {
+                "code": "08.05.03.01",
+                "name": "Herbal, S2"
+            }
+        ],
+        "06": [
+            {
+                "code": "01.06.03.01",
+                "name": "Geografi, S1"
+            },
+            {
+                "code": "02.06.03.01",
+                "name": "Geografi, S2"
+            },
+            {
+                "code": "03.06.03.01",
+                "name": "Ilmu Bahan-bahan/Material, S2"
+            },
+            {
+                "code": "04.06.03.01",
+                "name": "Ilmu Bahan-bahan/Material, S3"
+            },
+            {
+                "code": "05.06.03.01",
+                "name": "Geografi, S1 Paralel"
+            },
+            {
+                "code": "06.06.03.01",
+                "name": "Ilmu Geografi, S3"
+            }
+        ]
+    },
+    "04.01": {
+        "name": "Teknik",
+        "00": [
+            {
+                "code": "01.00.04.01",
+                "name": "Insinyur, Profesi"
+            },
+            {
+                "code": "02.00.04.01",
+                "name": "Teknik Sistem Energi, S2"
+            },
+            {
+                "code": "03.00.04.01",
+                "name": "Perencanaan Wilayah dan Kota, S2"
+            }
+        ],
+        "01": [
+            {
+                "code": "01.01.04.01",
+                "name": "Teknik Sipil, S1"
+            },
+            {
+                "code": "02.01.04.01",
+                "name": "Teknik Lingkungan, S1"
+            },
+            {
+                "code": "03.01.04.01",
+                "name": "Teknik Sipil - Ekstensi, S1 Ekstensi"
+            },
+            {
+                "code": "04.01.04.01",
+                "name": "Teknik Sipil, S1 Kls Internasional"
+            },
+            {
+                "code": "05.01.04.01",
+                "name": "Teknik Sipil, S2"
+            },
+            {
+                "code": "06.01.04.01",
+                "name": "Teknik Sipil, S3"
+            },
+            {
+                "code": "07.01.04.01",
+                "name": "Teknik Sipil, S1 Paralel"
+            },
+            {
+                "code": "08.01.04.01",
+                "name": "Teknik Lingkungan, S1 Paralel"
+            },
+            {
+                "code": "09.01.04.01",
+                "name": "Teknik Lingkungan, S2"
+            },
+            {
+                "code": "10.01.04.01",
+                "name": "Teknik Lingkungan, S1 Kls Internasional"
+            }
+        ],
+        "02": [
+            {
+                "code": "01.02.04.01",
+                "name": "Teknik Mesin, S1"
+            },
+            {
+                "code": "02.02.04.01",
+                "name": "Teknik Perkapalan, S1"
+            },
+            {
+                "code": "03.02.04.01",
+                "name": "Teknik Mesin, S1 Ekstensi"
+            },
+            {
+                "code": "04.02.04.01",
+                "name": "Teknik Mesin, S1 Kls Internasional"
+            },
+            {
+                "code": "05.02.04.01",
+                "name": "Teknik Mesin, S2"
+            },
+            {
+                "code": "06.02.04.01",
+                "name": "Teknik Mesin, S3"
+            },
+            {
+                "code": "07.02.04.01",
+                "name": "Teknik Mesin, S1 Paralel"
+            },
+            {
+                "code": "08.02.04.01",
+                "name": "Teknik Perkapalan, S1 Paralel"
+            },
+            {
+                "code": "09.02.04.01",
+                "name": "Teknik Perkapalan, S1 Kls Internasional"
+            }
+        ],
+        "03": [
+            {
+                "code": "01.03.04.01",
+                "name": "Teknik Elektro, S1"
+            },
+            {
+                "code": "02.03.04.01",
+                "name": "Teknik Komputer, S1"
+            },
+            {
+                "code": "03.03.04.01",
+                "name": "Teknik Elektro - Ekstensi, S1 Ekstensi"
+            },
+            {
+                "code": "04.03.04.01",
+                "name": "Teknik Elektro, S1 Kls Internasional"
+            },
+            {
+                "code": "05.03.04.01",
+                "name": "Teknik Elektro, S2"
+            },
+            {
+                "code": "06.03.04.01",
+                "name": "Opto Elektroteknika dan Aplikasi Laser, S2"
+            },
+            {
+                "code": "07.03.04.01",
+                "name": "Opto Elektroteknika dan Aplikasi Laser, S3"
+            },
+            {
+                "code": "08.03.04.01",
+                "name": "Teknik Elektro, S3"
+            },
+            {
+                "code": "09.03.04.01",
+                "name": "Teknik Elektro, S2 Kls Internasional"
+            },
+            {
+                "code": "10.03.04.01",
+                "name": "Teknik Elektro, S1 Paralel"
+            },
+            {
+                "code": "11.03.04.01",
+                "name": "Teknologi Biomedis, S2"
+            },
+            {
+                "code": "12.03.04.01",
+                "name": "Teknik Biomedik, S1"
+            },
+            {
+                "code": "13.03.04.01",
+                "name": "Teknik Komputer, S1 Paralel"
+            },
+            {
+                "code": "14.03.04.01",
+                "name": "Teknik Biomedik, S1 Paralel"
+            },
+            {
+                "code": "15.03.04.01",
+                "name": "Teknik Komputer, S1 Kls Internasional"
+            }
+        ],
+        "04": [
+            {
+                "code": "01.04.04.01",
+                "name": "Teknik Metalurgi dan Material, S1"
+            },
+            {
+                "code": "02.04.04.01",
+                "name": "Teknik Metalurgi dan Material - Ekstensi, S1 Ekstensi"
+            },
+            {
+                "code": "03.04.04.01",
+                "name": "Teknik Metalurgi dan Material, S1 Kls Internasional"
+            },
+            {
+                "code": "04.04.04.01",
+                "name": "Teknik Metalurgi dan Material, S2"
+            },
+            {
+                "code": "05.04.04.01",
+                "name": "Teknik Metalurgi dan Material, S3"
+            },
+            {
+                "code": "06.04.04.01",
+                "name": "Teknik Metalurgi dan Material, S1 Paralel"
+            },
+            {
+                "code": "07.04.04.01",
+                "name": "Manajemen Integritas Material, S2"
+            }
+        ],
+        "05": [
+            {
+                "code": "01.05.04.01",
+                "name": "Arsitektur, S1"
+            },
+            {
+                "code": "02.05.04.01",
+                "name": "Arsitektur, S1 Ekstensi"
+            },
+            {
+                "code": "03.05.04.01",
+                "name": "Arsitektur, S2"
+            },
+            {
+                "code": "04.05.04.01",
+                "name": "Arsitektur, S1 Kls Internasional"
+            },
+            {
+                "code": "05.05.04.01",
+                "name": "Arsitektur Interior, S1"
+            },
+            {
+                "code": "06.05.04.01",
+                "name": "Arsitektur, S3"
+            },
+            {
+                "code": "07.05.04.01",
+                "name": "Arsitek, Profesi"
+            },
+            {
+                "code": "08.05.04.01",
+                "name": "Arsitektur, S1 Paralel"
+            },
+            {
+                "code": "09.05.04.01",
+                "name": "Arsitektur Interior, S1 Paralel"
+            },
+            {
+                "code": "10.05.04.01",
+                "name": "Arsitektur Interior, S1 Kls Internasional"
+            }
+        ],
+        "06": [
+            {
+                "code": "01.06.04.01",
+                "name": "Teknik Kimia, S1"
+            },
+            {
+                "code": "02.06.04.01",
+                "name": "Teknik Kimia - Ekstensi, S1 Ekstensi"
+            },
+            {
+                "code": "03.06.04.01",
+                "name": "Teknik Kimia, S1 Kls Internasional"
+            },
+            {
+                "code": "04.06.04.01",
+                "name": "Teknik Kimia, S2"
+            },
+            {
+                "code": "05.06.04.01",
+                "name": "Teknik Kimia, S3"
+            },
+            {
+                "code": "06.06.04.01",
+                "name": "Teknik Bioproses, S1"
+            },
+            {
+                "code": "07.06.04.01",
+                "name": "Teknik Kimia, S1 Paralel"
+            },
+            {
+                "code": "08.06.04.01",
+                "name": "Teknik Bioproses, S1 Kls Internasional"
+            },
+            {
+                "code": "09.06.04.01",
+                "name": "Teknik Bioproses, S1 Paralel"
+            },
+            {
+                "code": "10.06.04.01",
+                "name": "Teknik Bioproses, S2"
+            }
+        ],
+        "07": [
+            {
+                "code": "01.07.04.01",
+                "name": "Teknik Industri, S1"
+            },
+            {
+                "code": "02.07.04.01",
+                "name": "Teknik Industri - Ekstensi, S1 Ekstensi"
+            },
+            {
+                "code": "03.07.04.01",
+                "name": "Teknik Industri, S2"
+            },
+            {
+                "code": "04.07.04.01",
+                "name": "Teknik Industri, S1 Paralel"
+            },
+            {
+                "code": "05.07.04.01",
+                "name": "Teknik Industri, S3"
+            },
+            {
+                "code": "06.07.04.01",
+                "name": "Teknik Industri, S1 Kls Internasional"
+            }
+        ]
+    },
+    "05.01": {
+        "name": "Hukum",
+        "00": [
+            {
+                "code": "01.00.05.01",
+                "name": "Ilmu Hukum, S1"
+            },
+            {
+                "code": "02.00.05.01",
+                "name": "Ilmu Hukum - Ekstensi, S1 Ekstensi"
+            },
+            {
+                "code": "03.00.05.01",
+                "name": "Ilmu Hukum, S2"
+            },
+            {
+                "code": "04.00.05.01",
+                "name": "Kenotariatan, S2"
+            },
+            {
+                "code": "05.00.05.01",
+                "name": "Ilmu Hukum, S3"
+            },
+            {
+                "code": "06.00.05.01",
+                "name": "Ilmu Hukum, S1 Paralel"
+            },
+            {
+                "code": "07.00.05.01",
+                "name": "Ilmu Hukum, S1 Kls Internasional"
+            }
+        ]
+    },
+    "06.01": {
+        "name": "Ekonomi dan Bisnis",
+        "01": [
+            {
+                "code": "01.01.06.01",
+                "name": "Ilmu Ekonomi, S1"
+            },
+            {
+                "code": "02.01.06.01",
+                "name": "Ilmu Ekonomi, S1 Kls Internasional"
+            },
+            {
+                "code": "03.01.06.01",
+                "name": "Ilmu Ekonomi, S2"
+            },
+            {
+                "code": "04.01.06.01",
+                "name": "Magister Perencanaan Ekonomi dan Kebijakan Pembangunan, S2"
+            },
+            {
+                "code": "05.01.06.01",
+                "name": "Ilmu Ekonomi, S3"
+            },
+            {
+                "code": "06.01.06.01",
+                "name": "Ilmu Ekonomi, S2 Kls Internasional"
+            },
+            {
+                "code": "07.01.06.01",
+                "name": "Ilmu Ekonomi Islam, S1"
+            },
+            {
+                "code": "08.01.06.01",
+                "name": "Bisnis Islam, S1"
+            },
+            {
+                "code": "09.01.06.01",
+                "name": "Magister Ekonomi Kependudukan dan Ketenagakerjaan, S2"
+            },
+            {
+                "code": "10.01.06.01",
+                "name": "Ilmu Ekonomi Islam, S1 Kls Internasional"
+            },
+            {
+                "code": "11.01.06.01",
+                "name": "Bisnis Islam, S1 Kls Internasional"
+            }
+        ],
+        "02": [
+            {
+                "code": "01.02.06.01",
+                "name": "Manajemen, S1"
+            },
+            {
+                "code": "02.02.06.01",
+                "name": "Manajemen, S1 Kls Internasional"
+            },
+            {
+                "code": "03.02.06.01",
+                "name": "Manajemen, S1 Ekstensi"
+            },
+            {
+                "code": "04.02.06.01",
+                "name": "Ilmu Manajemen, S2"
+            },
+            {
+                "code": "05.02.06.01",
+                "name": "Magister Manajemen, S2"
+            },
+            {
+                "code": "06.02.06.01",
+                "name": "Ilmu Manajemen, S3"
+            },
+            {
+                "code": "07.02.06.01",
+                "name": "Magister Manajemen, S2"
+            }
+        ],
+        "03": [
+            {
+                "code": "01.03.06.01",
+                "name": "Akuntansi, D3"
+            },
+            {
+                "code": "02.03.06.01",
+                "name": "Akuntansi, S1"
+            },
+            {
+                "code": "03.03.06.01",
+                "name": "Akuntansi, S1 Ekstensi"
+            },
+            {
+                "code": "04.03.06.01",
+                "name": "Akuntansi, S1 Kls Internasional"
+            },
+            {
+                "code": "05.03.06.01",
+                "name": "Profesi Akuntan, Profesi"
+            },
+            {
+                "code": "06.03.06.01",
+                "name": "Magister Akuntansi, S2"
+            },
+            {
+                "code": "07.03.06.01",
+                "name": "Ilmu Akuntansi, S2"
+            },
+            {
+                "code": "08.03.06.01",
+                "name": "Ilmu Akuntansi, S3"
+            },
+            {
+                "code": "09.03.06.01",
+                "name": "Magister Akuntansi, S2"
+            },
+            {
+                "code": "10.03.06.01",
+                "name": "Akuntansi, S1 Paralel"
+            }
+        ]
+    },
+    "07.01": {
+        "name": "Ilmu Pengetahuan Budaya",
+        "00": [
+            {
+                "code": "01.00.07.01",
+                "name": "Bahasa Cina, D3"
+            },
+            {
+                "code": "02.00.07.01",
+                "name": "Bahasa Arab, D3"
+            },
+            {
+                "code": "03.00.07.01",
+                "name": "Bahasa Jepang, D3"
+            },
+            {
+                "code": "04.00.07.01",
+                "name": "Bahasa Inggris, D3"
+            },
+            {
+                "code": "05.00.07.01",
+                "name": "Bahasa Perancis, D3"
+            },
+            {
+                "code": "06.00.07.01",
+                "name": "Bahasa Jerman, D3"
+            },
+            {
+                "code": "07.00.07.01",
+                "name": "Bahasa Belanda, D3"
+            },
+            {
+                "code": "08.00.07.01",
+                "name": "Sastra Arab, S1"
+            },
+            {
+                "code": "09.00.07.01",
+                "name": "Sastra Indonesia, S1"
+            },
+            {
+                "code": "10.00.07.01",
+                "name": "Sastra Daerah untuk Sastra Jawa, S1"
+            },
+            {
+                "code": "11.00.07.01",
+                "name": "Sastra Cina, S1"
+            },
+            {
+                "code": "12.00.07.01",
+                "name": "Sastra Jepang, S1"
+            },
+            {
+                "code": "13.00.07.01",
+                "name": "Sastra Inggris, S1"
+            },
+            {
+                "code": "14.00.07.01",
+                "name": "Sastra Perancis, S1"
+            },
+            {
+                "code": "15.00.07.01",
+                "name": "Sastra Jerman, S1"
+            },
+            {
+                "code": "16.00.07.01",
+                "name": "Sastra Rusia, S1"
+            },
+            {
+                "code": "17.00.07.01",
+                "name": "Sastra Belanda, S1"
+            },
+            {
+                "code": "18.00.07.01",
+                "name": "Bahasa dan Kebudayaan Korea, S1"
+            },
+            {
+                "code": "19.00.07.01",
+                "name": "Sastra Cina, S1 Paralel"
+            },
+            {
+                "code": "20.00.07.01",
+                "name": "Sastra Arab, S1 Paralel"
+            },
+            {
+                "code": "21.00.07.01",
+                "name": "Sastra Jepang, S1 Paralel"
+            },
+            {
+                "code": "22.00.07.01",
+                "name": "Sastra Inggris, S1 Paralel"
+            },
+            {
+                "code": "23.00.07.01",
+                "name": "Sastra Perancis, S1 Paralel"
+            },
+            {
+                "code": "24.00.07.01",
+                "name": "Sastra Jerman, S1 Paralel"
+            },
+            {
+                "code": "26.00.07.01",
+                "name": "Sastra Belanda, S1 Paralel"
+            },
+            {
+                "code": "27.00.07.01",
+                "name": "Bahasa dan Kebudayaan Korea, S1 Paralel"
+            },
+            {
+                "code": "28.00.07.01",
+                "name": "Asia Tenggara, S2"
+            },
+            {
+                "code": "29.00.07.01",
+                "name": "Asia Timur, S2"
+            },
+            {
+                "code": "30.00.07.01",
+                "name": "Sastra Indonesia, S1 Paralel"
+            },
+            {
+                "code": "31.00.07.01",
+                "name": "Sastra Daerah untuk Sastra Jawa, S1 Paralel"
+            },
+            {
+                "code": "32.00.07.01",
+                "name": "Sastra Rusia, S1 Paralel"
+            },
+            {
+                "code": "33.00.07.01",
+                "name": "Sastra Arab, S1 Kls Internasional"
+            }
+        ],
+        "01": [
+            {
+                "code": "01.01.07.01",
+                "name": "Arkeologi, S1"
+            },
+            {
+                "code": "02.01.07.01",
+                "name": "Arkeologi, S2"
+            },
+            {
+                "code": "03.01.07.01",
+                "name": "Arkeologi, S3"
+            },
+            {
+                "code": "04.01.07.01",
+                "name": "Arkeologi, S1 Paralel"
+            }
+        ],
+        "02": [
+            {
+                "code": "01.02.07.01",
+                "name": "Ilmu Filsafat, S1"
+            },
+            {
+                "code": "02.02.07.01",
+                "name": "Filsafat, S2"
+            },
+            {
+                "code": "03.02.07.01",
+                "name": "Ilmu Filsafat, S3"
+            },
+            {
+                "code": "04.02.07.01",
+                "name": "Ilmu Filsafat, S1 Paralel"
+            }
+        ],
+        "03": [
+            {
+                "code": "01.03.07.01",
+                "name": "Manajemen Informasi dan Dokumen, D3"
+            },
+            {
+                "code": "02.03.07.01",
+                "name": "Ilmu Perpustakaan, S1"
+            },
+            {
+                "code": "03.03.07.01",
+                "name": "Ilmu Perpustakaan, S2"
+            },
+            {
+                "code": "04.03.07.01",
+                "name": "Ilmu Perpustakaan, S1 Ekstensi"
+            },
+            {
+                "code": "05.03.07.01",
+                "name": "Ilmu Perpustakaan, S1 Paralel"
+            },
+            {
+                "code": "06.03.07.01",
+                "name": "Kajian Informasi, S3"
+            }
+        ],
+        "04": [
+            {
+                "code": "04.04.07.01",
+                "name": "Ilmu Linguistik, S2"
+            },
+            {
+                "code": "05.04.07.01",
+                "name": "Ilmu Linguistik, S3"
+            }
+        ],
+        "05": [
+            {
+                "code": "01.05.07.01",
+                "name": "Ilmu Susastra, S2"
+            },
+            {
+                "code": "02.05.07.01",
+                "name": "Ilmu Susastra, S3"
+            }
+        ],
+        "06": [
+            {
+                "code": "01.06.07.01",
+                "name": "Ilmu Sejarah, S1"
+            },
+            {
+                "code": "02.06.07.01",
+                "name": "Ilmu Sejarah, S2"
+            },
+            {
+                "code": "03.06.07.01",
+                "name": "Ilmu Sejarah, S3"
+            },
+            {
+                "code": "04.06.07.01",
+                "name": "Ilmu Sejarah, S1 Paralel"
+            }
+        ]
+    },
+    "08.01": {
+        "name": "Psikologi",
+        "00": [
+            {
+                "code": "01.00.08.01",
+                "name": "Psikologi, S1"
+            },
+            {
+                "code": "02.00.08.01",
+                "name": "Psikologi, S1 Kls Internasional"
+            },
+            {
+                "code": "03.00.08.01",
+                "name": "Psikologi, S1 Ekstensi"
+            },
+            {
+                "code": "04.00.08.01",
+                "name": "Psikologi, S2"
+            },
+            {
+                "code": "05.00.08.01",
+                "name": "Psikologi, S3"
+            },
+            {
+                "code": "06.00.08.01",
+                "name": "Psikologi Profesi, S2"
+            },
+            {
+                "code": "07.00.08.01",
+                "name": "Psikologi, S1 Paralel"
+            },
+            {
+                "code": "08.00.08.01",
+                "name": "Psikologi Terapan, S2"
+            },
+            {
+                "code": "09.00.08.01",
+                "name": "Pendidikan Profesi Psikologi, Profesi"
+            }
+        ]
+    },
+    "09.01": {
+        "name": "Ilmu Sosial dan Ilmu Politik",
+        "01": [
+            {
+                "code": "01.01.09.01",
+                "name": "Komunikasi, D3"
+            },
+            {
+                "code": "02.01.09.01",
+                "name": "Ilmu Komunikasi, S1"
+            },
+            {
+                "code": "03.01.09.01",
+                "name": "Ilmu Komunikasi - Ekstensi, S1 Ekstensi"
+            },
+            {
+                "code": "04.01.09.01",
+                "name": "Ilmu Komunikasi, S2"
+            },
+            {
+                "code": "05.01.09.01",
+                "name": "Ilmu Komunikasi, S3"
+            },
+            {
+                "code": "06.01.09.01",
+                "name": "Ilmu Komunikasi, S1 Paralel"
+            },
+            {
+                "code": "07.01.09.01",
+                "name": "Ilmu Komunikasi, S1 Kls Internasional"
+            }
+        ],
+        "02": [
+            {
+                "code": "01.02.09.01",
+                "name": "Ilmu Politik, S1"
+            },
+            {
+                "code": "02.02.09.01",
+                "name": "Ilmu Politik, S1 Ekstensi"
+            },
+            {
+                "code": "03.02.09.01",
+                "name": "Ilmu Politik, S2"
+            },
+            {
+                "code": "04.02.09.01",
+                "name": "Ilmu Politik, S3"
+            },
+            {
+                "code": "05.02.09.01",
+                "name": "Ilmu Politik, S1 Paralel"
+            }
+        ],
+        "03": [
+            {
+                "code": "01.03.09.01",
+                "name": "Administrasi Asuransi dan Aktuaria, D3"
+            },
+            {
+                "code": "02.03.09.01",
+                "name": "Administrasi Keuangan dan Perbankan, D3"
+            },
+            {
+                "code": "03.03.09.01",
+                "name": "Administrasi Perkantoran dan Sekretaris, D3"
+            },
+            {
+                "code": "04.03.09.01",
+                "name": "Administrasi Perpajakan, D3"
+            },
+            {
+                "code": "05.03.09.01",
+                "name": "Ilmu Administrasi Fiskal, S1"
+            },
+            {
+                "code": "06.03.09.01",
+                "name": "Ilmu Administrasi Negara, S1"
+            },
+            {
+                "code": "07.03.09.01",
+                "name": "Ilmu Administrasi Niaga, S1"
+            },
+            {
+                "code": "08.03.09.01",
+                "name": "Ilmu Administrasi Fiskal, S1 Ekstensi"
+            },
+            {
+                "code": "09.03.09.01",
+                "name": "Ilmu Administrasi Negara, S1 Ekstensi"
+            },
+            {
+                "code": "10.03.09.01",
+                "name": "Ilmu Administrasi Niaga, S1 Ekstensi"
+            },
+            {
+                "code": "11.03.09.01",
+                "name": "Ilmu Administrasi, S2"
+            },
+            {
+                "code": "12.03.09.01",
+                "name": "Ilmu Administrasi, S3"
+            },
+            {
+                "code": "13.03.09.01",
+                "name": "Ilmu Administrasi Fiskal, S1 Paralel"
+            },
+            {
+                "code": "14.03.09.01",
+                "name": "Ilmu Administrasi Negara, S1 Paralel"
+            },
+            {
+                "code": "15.03.09.01",
+                "name": "Ilmu Administrasi Niaga, S1 Paralel"
+            }
+        ],
+        "04": [
+            {
+                "code": "01.04.09.01",
+                "name": "Sosiologi, S1"
+            },
+            {
+                "code": "02.04.09.01",
+                "name": "Sosiologi, S2"
+            },
+            {
+                "code": "03.04.09.01",
+                "name": "Sosiologi, S3"
+            },
+            {
+                "code": "04.04.09.01",
+                "name": "Sosiologi, S1 Paralel"
+            }
+        ],
+        "05": [
+            {
+                "code": "01.05.09.01",
+                "name": "Kriminologi, S1"
+            },
+            {
+                "code": "02.05.09.01",
+                "name": "Kriminologi - Ekstensi, S1 Ekstensi"
+            },
+            {
+                "code": "03.05.09.01",
+                "name": "Kriminologi, S2"
+            },
+            {
+                "code": "04.05.09.01",
+                "name": "Kriminologi, S3"
+            },
+            {
+                "code": "05.05.09.01",
+                "name": "Kriminologi, S1 Paralel"
+            },
+            {
+                "code": "06.05.09.01",
+                "name": "Kriminologi, S1 Kls Internasional"
+            }
+        ],
+        "06": [
+            {
+                "code": "01.06.09.01",
+                "name": "Ilmu Kesejahteraan Sosial, S1"
+            },
+            {
+                "code": "02.06.09.01",
+                "name": "Ilmu Kesejahteraan Sosial, S2"
+            },
+            {
+                "code": "03.06.09.01",
+                "name": "Ilmu Kesejahteraan Sosial, S3"
+            },
+            {
+                "code": "04.06.09.01",
+                "name": "Ilmu Kesejahteraan Sosial, S1 Paralel"
+            }
+        ],
+        "07": [
+            {
+                "code": "01.07.09.01",
+                "name": "Pariwisata, D3"
+            },
+            {
+                "code": "02.07.09.01",
+                "name": "Antropologi Sosial, S1"
+            },
+            {
+                "code": "03.07.09.01",
+                "name": "Antropologi, S2"
+            },
+            {
+                "code": "04.07.09.01",
+                "name": "Antropologi, S3"
+            },
+            {
+                "code": "05.07.09.01",
+                "name": "Antropologi Sosial, S1 Paralel"
+            },
+            {
+                "code": "06.07.09.01",
+                "name": "Antropologi Sosial, S1 Ekstensi"
+            }
+        ],
+        "08": [
+            {
+                "code": "01.08.09.01",
+                "name": "Ilmu Hubungan Internasional, S1"
+            },
+            {
+                "code": "02.08.09.01",
+                "name": "Ilmu Hubungan Internasional, S2"
+            },
+            {
+                "code": "03.08.09.01",
+                "name": "Kajian Terorisme dalam Keamanan Internasional, S2"
+            },
+            {
+                "code": "04.08.09.01",
+                "name": "Ilmu Hubungan Internasional, S1 Paralel"
+            },
+            {
+                "code": "05.08.09.01",
+                "name": "Ilmu Hubungan Internasional, S1 Ekstensi"
+            },
+            {
+                "code": "06.08.09.01",
+                "name": "Hubungan Internasional, S3"
+            },
+            {
+                "code": "07.08.09.01",
+                "name": "Ilmu Hubungan Internasional, S1 Kls Internasional"
+            }
+        ]
+    },
+    "10.01": {
+        "name": "Kesehatan Masyarakat",
+        "00": [
+            {
+                "code": "01.00.10.01",
+                "name": "Kesehatan Masyarakat, S1"
+            },
+            {
+                "code": "02.00.10.01",
+                "name": "Kesehatan Masyarakat, S1 Ekstensi"
+            },
+            {
+                "code": "03.00.10.01",
+                "name": "Ilmu Kesehatan Masyarakat, S2"
+            },
+            {
+                "code": "04.00.10.01",
+                "name": "Ilmu Kesehatan Masyarakat, S2 Kls Internasional"
+            },
+            {
+                "code": "05.00.10.01",
+                "name": "Ilmu Kesehatan Masyarakat, S3"
+            },
+            {
+                "code": "06.00.10.01",
+                "name": "Kesehatan Lingkungan, S1"
+            },
+            {
+                "code": "07.00.10.01",
+                "name": "Kesehatan Masyarakat, S1 Paralel"
+            },
+            {
+                "code": "08.00.10.01",
+                "name": "Kesehatan Lingkungan, S1 Paralel"
+            }
+        ],
+        "01": [
+            {
+                "code": "01.01.10.01",
+                "name": "Asuransi Kesehatan, D3"
+            },
+            {
+                "code": "02.01.10.01",
+                "name": "Manajemen Informasi Kesehatan dan Rekam Medis, D3"
+            },
+            {
+                "code": "03.01.10.01",
+                "name": "Manajemen Pelayanan Rumah Sakit, D3"
+            },
+            {
+                "code": "04.01.10.01",
+                "name": "Administrasi Rumah Sakit, S2"
+            }
+        ],
+        "03": [
+            {
+                "code": "01.03.10.01",
+                "name": "Epidemiologi, S2"
+            },
+            {
+                "code": "02.03.10.01",
+                "name": "Epidemiologi, S3"
+            }
+        ],
+        "04": [
+            {
+                "code": "01.04.10.01",
+                "name": "Gizi, S1"
+            },
+            {
+                "code": "02.04.10.01",
+                "name": "Gizi, S1 Paralel"
+            }
+        ],
+        "06": [
+            {
+                "code": "01.06.10.01",
+                "name": "Keselamatan dan Kesehatan Kerja, D3"
+            },
+            {
+                "code": "02.06.10.01",
+                "name": "Keselamatan dan Kesehatan Kerja, S2"
+            },
+            {
+                "code": "03.06.10.01",
+                "name": "Keselamatan dan Kesehatan Kerja, S1"
+            },
+            {
+                "code": "04.06.10.01",
+                "name": "Keselamatan dan Kesehatan Kerja, S1 Paralel"
+            }
+        ],
+        "07": [
+            {
+                "code": "01.07.10.01",
+                "name": "Kehumasan Pelayanan Kesehatan, D3"
+            },
+            {
+                "code": "02.07.10.01",
+                "name": "Promosi dan Pendidikan Kesehatan, D3"
+            }
+        ]
+    },
+    "12.01": {
+        "name": "Ilmu Komputer",
+        "00": [
+            {
+                "code": "01.00.12.01",
+                "name": "Ilmu Komputer, S1"
+            },
+            {
+                "code": "02.00.12.01",
+                "name": "Ilmu Komputer, S1 Kls Internasional"
+            },
+            {
+                "code": "03.00.12.01",
+                "name": "Ilmu Komputer, S2"
+            },
+            {
+                "code": "04.00.12.01",
+                "name": "Teknologi Informasi, S2"
+            },
+            {
+                "code": "05.00.12.01",
+                "name": "Ilmu Komputer, S3"
+            },
+            {
+                "code": "06.00.12.01",
+                "name": "Sistem Informasi, S1"
+            },
+            {
+                "code": "07.00.12.01",
+                "name": "Sistem Informasi - Ekstensi, S1 Ekstensi"
+            },
+            {
+                "code": "08.00.12.01",
+                "name": "Sistem Informasi, S1 Paralel"
+            },
+            {
+                "code": "09.00.12.01",
+                "name": "Ilmu Komputer, S1 Paralel"
+            },
+            {
+                "code": "10.00.12.01",
+                "name": "Kecerdasan Artifisial, S1"
+            }
+        ]
+    },
+    "13.01": {
+        "name": "Ilmu Keperawatan",
+        "00": [
+            {
+                "code": "01.00.13.01",
+                "name": "Ilmu Keperawatan, S1"
+            },
+            {
+                "code": "02.00.13.01",
+                "name": "Ilmu Keperawatan, S1 Ekstensi"
+            },
+            {
+                "code": "03.00.13.01",
+                "name": "Profesi Ners, Profesi"
+            },
+            {
+                "code": "04.00.13.01",
+                "name": "Ilmu Keperawatan, S2"
+            },
+            {
+                "code": "05.00.13.01",
+                "name": "Spesialis Keperawatan Komunitas, Spesialis 1"
+            },
+            {
+                "code": "06.00.13.01",
+                "name": "Spesialis Keperawatan Maternitas, Spesialis 1"
+            },
+            {
+                "code": "07.00.13.01",
+                "name": "Spesialis Keperawatan Medikal Bedah, Spesialis 1"
+            },
+            {
+                "code": "08.00.13.01",
+                "name": "Spesialis Keperawatan Jiwa, Spesialis 1"
+            },
+            {
+                "code": "09.00.13.01",
+                "name": "Ilmu Keperawatan, S3"
+            },
+            {
+                "code": "10.00.13.01",
+                "name": "Spesialis Keperawatan Anak, Spesialis 1"
+            },
+            {
+                "code": "11.00.13.01",
+                "name": "Spesialis Keperawatan Onkologi, Spesialis 1"
+            },
+            {
+                "code": "12.00.13.01",
+                "name": "Ilmu Keperawatan, S1 Paralel"
+            },
+            {
+                "code": "13.00.13.01",
+                "name": "Ilmu Keperawatan, S1 Kls Internasional"
+            }
+        ]
+    },
+    "14.01": {
+        "name": "Pascasarjana",
+        "00": [
+            {
+                "code": "01.00.14.01",
+                "name": "Kajian Ilmu Kepolisian, S2"
+            },
+            {
+                "code": "02.00.14.01",
+                "name": "Kajian Ilmu Lingkungan, S2"
+            },
+            {
+                "code": "03.00.14.01",
+                "name": "Kajian Kependudukan & Ketenagaan Kerja, S2"
+            },
+            {
+                "code": "04.00.14.01",
+                "name": "Kajian Ketahanan Nasional, S2"
+            },
+            {
+                "code": "05.00.14.01",
+                "name": "Kajian Pengembangan Perkotaan, S2"
+            },
+            {
+                "code": "06.00.14.01",
+                "name": "Kajian Gender, S2"
+            },
+            {
+                "code": "07.00.14.01",
+                "name": "Kajian Wilayah Amerika, S2"
+            },
+            {
+                "code": "08.00.14.01",
+                "name": "Kajian Wilayah Eropa, S2"
+            },
+            {
+                "code": "09.00.14.01",
+                "name": "Kajian Wilayah Jepang, S2"
+            },
+            {
+                "code": "10.00.14.01",
+                "name": "Kajian Wilayah Timur Tengah Islam, S2"
+            },
+            {
+                "code": "11.00.14.01",
+                "name": "Ilmu Lingkungan, S3"
+            },
+            {
+                "code": "12.00.14.01",
+                "name": "Teknologi Biomedis, S2"
+            }
+        ]
+    },
+    "15.01": {
+        "name": "Pendidikan Vokasi",
+        "00": [
+            {
+                "code": "01.00.15.01",
+                "name": "Administrasi Rumah Sakit, D3"
+            },
+            {
+                "code": "02.00.15.01",
+                "name": "Fisioterapi, D3"
+            },
+            {
+                "code": "03.00.15.01",
+                "name": "Okupasi Terapi, D3"
+            },
+            {
+                "code": "04.00.15.01",
+                "name": "Akuntansi, D3"
+            },
+            {
+                "code": "05.00.15.01",
+                "name": "Manajemen Rekod dan Arsip, D3"
+            },
+            {
+                "code": "06.00.15.01",
+                "name": "Hubungan Masyarakat, D3"
+            },
+            {
+                "code": "07.00.15.01",
+                "name": "Administrasi Asuransi dan Aktuaria, D3"
+            },
+            {
+                "code": "08.00.15.01",
+                "name": "Administrasi Keuangan dan Perbankan, D3"
+            },
+            {
+                "code": "09.00.15.01",
+                "name": "Administrasi Perkantoran, D3"
+            },
+            {
+                "code": "10.00.15.01",
+                "name": "Administrasi Perpajakan, D3"
+            },
+            {
+                "code": "11.00.15.01",
+                "name": "Pariwisata, D3"
+            },
+            {
+                "code": "12.00.15.01",
+                "name": "Periklanan Kreatif, D3"
+            },
+            {
+                "code": "13.00.15.01",
+                "name": "Penyiaran Multimedia, D3"
+            }
+        ],
+        "01": [
+            {
+                "code": "01.01.15.01",
+                "name": "Manajemen Bisnis Pariwisata, D4"
+            },
+            {
+                "code": "02.01.15.01",
+                "name": "Manajemen Rekod dan Arsip, D4"
+            },
+            {
+                "code": "03.01.15.01",
+                "name": "Bisnis Kreatif, D4"
+            },
+            {
+                "code": "04.01.15.01",
+                "name": "Produksi Media, D4"
+            },
+            {
+                "code": "05.01.15.01",
+                "name": "Fisioterapi, D4"
+            },
+            {
+                "code": "06.01.15.01",
+                "name": "Terapi Okupasi, D4"
+            }
+        ],
+        "02": [
+            {
+                "code": "01.02.15.01",
+                "name": "Industri Kreatif, S2 Terapan"
+            }
+        ]
+    },
+    "17.01": {
+        "name": "Farmasi",
+        "00": [
+            {
+                "code": "01.00.17.01",
+                "name": "Farmasi, S1"
+            },
+            {
+                "code": "02.00.17.01",
+                "name": "Farmasi, S1 Paralel"
+            },
+            {
+                "code": "03.00.17.01",
+                "name": "Apoteker, Profesi"
+            },
+            {
+                "code": "04.00.17.01",
+                "name": "Ilmu Kefarmasian, S2"
+            },
+            {
+                "code": "05.00.17.01",
+                "name": "Herbal, S2"
+            },
+            {
+                "code": "06.00.17.01",
+                "name": "Ilmu Farmasi, S3"
+            }
+        ]
+    },
+    "18.01": {
+        "name": "Ilmu Administrasi",
+        "00": [
+            {
+                "code": "01.00.18.01",
+                "name": "Ilmu Administrasi Fiskal, S1"
+            },
+            {
+                "code": "02.00.18.01",
+                "name": "Ilmu Administrasi Negara, S1"
+            },
+            {
+                "code": "03.00.18.01",
+                "name": "Ilmu Administrasi Niaga, S1"
+            },
+            {
+                "code": "04.00.18.01",
+                "name": "Ilmu Administrasi Fiskal, S1 Paralel"
+            },
+            {
+                "code": "05.00.18.01",
+                "name": "Ilmu Administrasi Negara, S1 Paralel"
+            },
+            {
+                "code": "06.00.18.01",
+                "name": "Ilmu Administrasi Niaga, S1 Paralel"
+            },
+            {
+                "code": "07.00.18.01",
+                "name": "Ilmu Administrasi Fiskal, S1 Ekstensi"
+            },
+            {
+                "code": "08.00.18.01",
+                "name": "Ilmu Administrasi Negara, S1 Ekstensi"
+            },
+            {
+                "code": "09.00.18.01",
+                "name": "Ilmu Administrasi Niaga, S1 Ekstensi"
+            },
+            {
+                "code": "10.00.18.01",
+                "name": "Ilmu Administrasi, S2"
+            },
+            {
+                "code": "11.00.18.01",
+                "name": "Ilmu Administrasi, S3"
+            },
+            {
+                "code": "12.00.18.01",
+                "name": "Kebijakan Publik dan Governansi, S2"
+            },
+            {
+                "code": "13.00.18.01",
+                "name": "Ilmu Administrasi Fiskal, S1 Kls Internasional"
+            },
+            {
+                "code": "14.00.18.01",
+                "name": "Ilmu Administrasi Negara, S1 Kls Internasional"
+            },
+            {
+                "code": "15.00.18.01",
+                "name": "Ilmu Administrasi Niaga, S1 Kls Internasional"
+            }
+        ]
+    },
+    "19.01": {
+        "name": "Pascasarjana Pembangunan Berkelanjutan",
+        "00": [
+            {
+                "code": "01.00.19.01",
+                "name": "Ilmu Lingkungan, S2"
+            },
+            {
+                "code": "02.00.19.01",
+                "name": "Ilmu Lingkungan, S3"
+            },
+            {
+                "code": "03.00.19.01",
+                "name": "Manajemen Bencana, S2"
+            }
+        ]
+    },
+    "20.01": {
+        "name": "Pascasarjana Pembangunan Berkelanjutan",
+        "00": [
+            {
+                "code": "01.00.20.01",
+                "name": "Kajian Ketahanan Nasional, S2"
+            },
+            {
+                "code": "02.00.20.01",
+                "name": "Kajian Ilmu Kepolisian, S2"
+            },
+            {
+                "code": "03.00.20.01",
+                "name": "Kajian Gender, S2"
+            },
+            {
+                "code": "04.00.20.01",
+                "name": "Kajian Wilayah Amerika, S2"
+            },
+            {
+                "code": "05.00.20.01",
+                "name": "Kajian Wilayah Eropa, S2"
+            },
+            {
+                "code": "06.00.20.01",
+                "name": "Kajian Wilayah Jepang, S2"
+            },
+            {
+                "code": "07.00.20.01",
+                "name": "Kajian Wilayah Timur Tengah dan Islam, S2"
+            },
+            {
+                "code": "08.00.20.01",
+                "name": "Kajian Pengembangan Perkotaan, S2"
+            },
+            {
+                "code": "09.00.20.01",
+                "name": "Kajian Terorisme, S2"
+            },
+            {
+                "code": "10.00.20.01",
+                "name": "Kajian Stratejik dan Global, S3"
+            }
+        ]
+    },
+    "21.01": {
+        "name": "Pascasarjana Pembangunan Berkelanjutan",
+        "00": [
+            {
+                "code": "01.00.21.01",
+                "name": "Ilmu Lingkungan, S3"
+            },
+            {
+                "code": "02.00.21.01",
+                "name": "Kajian Stratejik dan Global, S3"
+            }
+        ],
+        "01": [
+            {
+                "code": "01.01.21.01",
+                "name": "Ilmu Lingkungan, S2"
+            },
+            {
+                "code": "02.01.21.01",
+                "name": "Manajemen Bencana, S2"
+            }
+        ],
+        "02": [
+            {
+                "code": "01.02.21.01",
+                "name": "Kajian Ketahanan Nasional, S2"
+            },
+            {
+                "code": "02.02.21.01",
+                "name": "Kajian Gender, S2"
+            },
+            {
+                "code": "03.02.21.01",
+                "name": "Kajian Ilmu Kepolisian, S2"
+            },
+            {
+                "code": "04.02.21.01",
+                "name": "Kajian Terorisme, S2"
+            }
+        ],
+        "03": [
+            {
+                "code": "01.03.21.01",
+                "name": "Kajian Pengembangan Perkotaan, S2"
+            },
+            {
+                "code": "02.03.21.01",
+                "name": "Kajian Wilayah Jepang, S2"
+            },
+            {
+                "code": "03.03.21.01",
+                "name": "Kajian Wilayah Timur Tengah dan Islam, S2"
+            },
+            {
+                "code": "04.03.21.01",
+                "name": "Kajian Wilayah Eropa, S2"
+            },
+            {
+                "code": "05.03.21.01",
+                "name": "Kajian Wilayah Amerika, S2"
+            }
+        ]
+    },
+    "51.01": {
+        "name": "Rumah Sakit Jantung dan Pembuluh Darah Harapan Kita",
+        "00": [
+            {
+                "code": "01.00.51.01",
+                "name": "Jantung dan Pembuluh Darah, Spesialis 1"
+            }
+        ]
+    },
+    "52.01": {
+        "name": "Rumah Sakit Anak dan Bunda Harapan Kita",
+        "00": [
+            {
+                "code": "01.00.52.01",
+                "name": "Ilmu Kesehatan Anak, Spesialis 1"
+            }
+        ]
+    },
+    "53.01": {
+        "name": "Rumah Sakit Kanker Dharmais",
+        "00": [
+            {
+                "code": "01.00.53.01",
+                "name": "Onkologi Radiasi, Spesialis 1"
+            }
+        ]
+    }
+}

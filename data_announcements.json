@@ -1,0 +1,70 @@
+[
+  {
+    "id": "ann_1",
+    "author": "imanuel",
+    "authorName": "imanuel",
+    "authorTag": "cs.26",
+    "authorAv": "imanuel",
+    "category": "Looking for Team",
+    "categoryKey": "team",
+    "title": "Looking for 1 Backend Developer (Django) - COMPFEST Hackathon",
+    "desc": "Halo teman-teman! Tim kami butuh 1 orang yang familiar dengan Django REST Framework dan PostgreSQL untuk ikutan COMPFEST Software Engineering Academy / Hackathon. Santai tapi committed, DM kalau minat!",
+    "tags": [
+      "Django",
+      "PostgreSQL",
+      "COMPFEST"
+    ],
+    "time": "15 mins ago"
+  },
+  {
+    "id": "ann_2",
+    "author": "thealpharaoh",
+    "authorName": "thealpharaoh",
+    "authorTag": "cs.26",
+    "authorAv": "thealpharaoh",
+    "category": "Promotions",
+    "categoryKey": "promo",
+    "title": "ZELLASEYE Dance Cover Auditions Open! 💜",
+    "desc": "Open recruitment dancer untuk project cover K-Pop semester ganjil! Audisi santai di Selasar Gedung Baru Lt. 5. Semua angkatan Fasilkom boleh ikutan.",
+    "tags": [
+      "Dance",
+      "K-Pop",
+      "PacilCommunity"
+    ],
+    "time": "1 hour ago"
+  },
+  {
+    "id": "ann_3",
+    "author": "cindireulla",
+    "authorName": "cindireulla",
+    "authorTag": "cs.26",
+    "authorAv": "cindireulla",
+    "category": "Campus Events",
+    "categoryKey": "event",
+    "title": "Study Jam: PBP Django Sprint & Best Practices",
+    "desc": "Malam ini kita adain review bareng di Discord Fasilkom dan Lab A1.01 buat bahas error authentication dan deployment Django. Terbuka untuk seluruh angkatan 26!",
+    "tags": [
+      "WebDev",
+      "Django",
+      "PBP"
+    ],
+    "time": "3 hours ago"
+  },
+  {
+    "id": "ann_4",
+    "author": "nonapacil",
+    "authorName": "nonapacil",
+    "authorTag": "si.26",
+    "authorAv": "nonapacil",
+    "category": "Looking for Team",
+    "categoryKey": "team",
+    "title": "Gemastik UX Design Team - Need 1 UX Researcher / Designer",
+    "desc": "Tim Gemastik Divisi Desain Pengalaman Pengguna mencari 1 rekan yang suka interview user dan Figma. Portofolio santai aja, yang penting mau explore bareng!",
+    "tags": [
+      "UI/UX",
+      "Figma",
+      "Gemastik"
+    ],
+    "time": "Yesterday"
+  }
+]

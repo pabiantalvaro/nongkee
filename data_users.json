@@ -1,0 +1,390 @@
+{
+  "currentUser": {
+    "id": "bian",
+    "username": "bian/varo",
+    "fullName": "Fabian Alvaro Muhammad",
+    "displayName": "Fabian Alvaro (bian/varo)",
+    "npm": "2606859093",
+    "tag": "26/Zenith | CS",
+    "cohort": "cs.26",
+    "avatar": "avatars/avatar_bian.png"
+  },
+  "avatars": {
+    "abizar": "avatars/avatar_abizar.png",
+    "ajen": "avatars/avatar_ajen.png",
+    "benishere": "avatars/avatar_benishere.png",
+    "benishere565": "avatars/avatar_benishere.png",
+    "bian": "avatars/avatar_bian.png",
+    "varo": "avatars/avatar_bian.png",
+    "me": "avatars/avatar_bian.png",
+    "binar": "avatars/avatar_binar.png",
+    "cindireulla": "avatars/avatar_cindireulla.png",
+    "ezar": "avatars/avatar_ezar.png",
+    "fiqhi": "avatars/avatar_fiqhi.png",
+    "hana": "avatars/avatar_hana.png",
+    "cryinfairys": "avatars/avatar_hana.png",
+    "imanuel": "avatars/avatar_imanuel.png",
+    "jonathan": "avatars/avatar_jonathan.png",
+    "kejambreet": "avatars/avatar_kejambreet.png",
+    "maiza": "avatars/avatar_maiza.png",
+    "misha": "avatars/avatar_misha.png",
+    "nami": "avatars/avatar_nami.png",
+    "nina": "avatars/avatar_nina.png",
+    "torikararamyon": "avatars/avatar_nina.png",
+    "nonapacil": "avatars/avatar_nonapacil.png",
+    "peypuy": "avatars/avatar_peypuy.png",
+    "rafif": "avatars/avatar_rafif.png",
+    "setip": "avatars/avatar_setip.png",
+    "thealpharaoh": "avatars/avatar_thealpharaoh.png"
+  },
+  "friends": [
+    {
+      "id": "nonapacil",
+      "name": "nonapacil",
+      "tag": "si.26",
+      "av": "nonapacil",
+      "schedule": {
+        "08:30": {
+          "status": "in_class",
+          "course": "Dasar-Dasar Pemrograman 1",
+          "room": "Lab A1.01",
+          "time": "08:00 - 10:40"
+        },
+        "09:41": {
+          "status": "in_class",
+          "course": "Dasar-Dasar Pemrograman 1",
+          "room": "Lab A1.01",
+          "time": "08:00 - 10:40"
+        },
+        "11:30": {
+          "status": "free",
+          "spot": "Kantin Pacil",
+          "note": "Nongkee bareng anak SI"
+        },
+        "13:30": {
+          "status": "in_class",
+          "course": "Matematika Diskret 1",
+          "room": "A6.10 (Ged Baru)",
+          "time": "13:00 - 14:40"
+        },
+        "15:45": {
+          "status": "free",
+          "spot": "Stulo 1",
+          "note": "Nugas DDP"
+        }
+      }
+    },
+    {
+      "id": "imanuel",
+      "name": "imanuel",
+      "tag": "cs.26",
+      "av": "imanuel",
+      "schedule": {
+        "08:30": {
+          "status": "in_class",
+          "course": "Basis Data (BasDat A)",
+          "room": "A6.07 (Ged Baru)",
+          "time": "08:00 - 10:30"
+        },
+        "09:41": {
+          "status": "in_class",
+          "course": "Basis Data (BasDat A)",
+          "room": "A6.07 (Ged Baru)",
+          "time": "08:00 - 10:30"
+        },
+        "11:30": {
+          "status": "free",
+          "spot": "Kantin Pacil",
+          "note": "Makan siang"
+        },
+        "13:30": {
+          "status": "free",
+          "spot": "Lab A1.01",
+          "note": "Ngulik backend Django"
+        },
+        "15:45": {
+          "status": "in_class",
+          "course": "Aljabar Linier",
+          "room": "A6.10 (Ged Baru)",
+          "time": "15:00 - 15:50"
+        }
+      }
+    },
+    {
+      "id": "maiza",
+      "name": "maiza",
+      "tag": "cs.26",
+      "av": "maiza",
+      "schedule": {
+        "08:30": {
+          "status": "free",
+          "spot": "Perpus Pacil Lt. 2",
+          "note": "Ngerjain tugas mandiri"
+        },
+        "09:41": {
+          "status": "free",
+          "spot": "Perpus Pacil Lt. 2",
+          "note": "Belajar Alin"
+        },
+        "11:30": {
+          "status": "free",
+          "spot": "Stulo 1",
+          "note": "Kumpul tim Django"
+        },
+        "13:30": {
+          "status": "in_class",
+          "course": "Aljabar Linier (Alin B)",
+          "room": "A6.10 (Ged Baru)",
+          "time": "13:00 - 13:50"
+        },
+        "15:45": {
+          "status": "free",
+          "spot": "Taman Pacil",
+          "note": "Chill sore"
+        }
+      }
+    },
+    {
+      "id": "kejambreet",
+      "name": "kejambreet",
+      "tag": "cs.26",
+      "av": "kejambreet",
+      "schedule": {
+        "08:30": {
+          "status": "in_class",
+          "course": "Basis Data (BasDat A)",
+          "room": "A6.07 (Ged Baru)",
+          "time": "08:00 - 10:30"
+        },
+        "09:41": {
+          "status": "in_class",
+          "course": "Basis Data (BasDat A)",
+          "room": "A6.07 (Ged Baru)",
+          "time": "08:00 - 10:30"
+        },
+        "11:30": {
+          "status": "free",
+          "spot": "Stulo 2",
+          "note": "Review ERD BasDat"
+        },
+        "13:30": {
+          "status": "free",
+          "spot": "Selasar Gd Baru",
+          "note": "Ngobrol santai"
+        },
+        "15:45": {
+          "status": "in_class",
+          "course": "Aljabar Linier",
+          "room": "A6.10 (Ged Baru)",
+          "time": "15:00 - 15:50"
+        }
+      }
+    },
+    {
+      "id": "cryinfairys",
+      "name": "cryinfairys",
+      "tag": "cs.26",
+      "av": "cryinfairys",
+      "schedule": {
+        "08:30": {
+          "status": "free",
+          "spot": "Stulo 1",
+          "note": "Review materi Manbis"
+        },
+        "09:41": {
+          "status": "free",
+          "spot": "Stulo 1",
+          "note": "MANBIS OMAIGAT meet"
+        },
+        "11:30": {
+          "status": "free",
+          "spot": "Kantin Pacil",
+          "note": "Makan siang"
+        },
+        "13:30": {
+          "status": "in_class",
+          "course": "Aljabar Linier",
+          "room": "A6.08 (Ged Baru)",
+          "time": "13:00 - 14:40"
+        },
+        "15:45": {
+          "status": "free",
+          "spot": "Selasar Gd Lama",
+          "note": "Nongkrong sore"
+        }
+      }
+    },
+    {
+      "id": "cindireulla",
+      "name": "cindireulla",
+      "tag": "cs.26",
+      "av": "cindireulla",
+      "schedule": {
+        "08:30": {
+          "status": "in_class",
+          "course": "Pemrograman Berbasis Platform",
+          "room": "A5.51 (Ged Baru)",
+          "time": "08:00 - 10:30"
+        },
+        "09:41": {
+          "status": "in_class",
+          "course": "Pemrograman Berbasis Platform",
+          "room": "A5.51 (Ged Baru)",
+          "time": "08:00 - 10:30"
+        },
+        "11:30": {
+          "status": "free",
+          "spot": "Kantin Pacil",
+          "note": "Stress pbp sprint"
+        },
+        "13:30": {
+          "status": "free",
+          "spot": "Lab A1.01",
+          "note": "Lanjut coding sprint"
+        },
+        "15:45": {
+          "status": "free",
+          "spot": "Stulo 2",
+          "note": "Diskusi PR"
+        }
+      }
+    },
+    {
+      "id": "thealpharaoh",
+      "name": "thealpharaoh",
+      "tag": "cs.26",
+      "av": "thealpharaoh",
+      "schedule": {
+        "08:30": {
+          "status": "free",
+          "spot": "Selasar Gd Baru",
+          "note": "Dance practice setup"
+        },
+        "09:41": {
+          "status": "free",
+          "spot": "A5.51 (Ged Baru)",
+          "note": "Audisi ZELLASEYE"
+        },
+        "11:30": {
+          "status": "free",
+          "spot": "Kantin Pacil",
+          "note": "Lunch break"
+        },
+        "13:30": {
+          "status": "in_class",
+          "course": "Aljabar Linier",
+          "room": "A6.09 (Ged Baru)",
+          "time": "13:00 - 14:40"
+        },
+        "15:45": {
+          "status": "free",
+          "spot": "Selasar Gd Baru",
+          "note": "Evaluation session"
+        }
+      }
+    },
+    {
+      "id": "ajen",
+      "name": "ajen",
+      "tag": "cs.26",
+      "av": "ajen",
+      "schedule": {
+        "08:30": {
+          "status": "in_class",
+          "course": "Analisis Numerik",
+          "room": "A1.10 (Ged Lama)",
+          "time": "08:00 - 10:30"
+        },
+        "09:41": {
+          "status": "in_class",
+          "course": "Analisis Numerik",
+          "room": "A1.10 (Ged Lama)",
+          "time": "08:00 - 10:30"
+        },
+        "11:30": {
+          "status": "free",
+          "spot": "Stulo 1",
+          "note": "Stress bareng Rafif & Jo"
+        },
+        "13:30": {
+          "status": "free",
+          "spot": "Kantin Pacil",
+          "note": "Makan siang"
+        },
+        "15:45": {
+          "status": "free",
+          "spot": "Perpus Pacil Lt. 2",
+          "note": "Revisi kodingan Anum"
+        }
+      }
+    },
+    {
+      "id": "benishere",
+      "name": "benishere",
+      "tag": "cs.26",
+      "av": "benishere",
+      "schedule": {
+        "08:30": {
+          "status": "free",
+          "spot": "Selasar Gd Baru",
+          "note": "Brainstorming konsep game"
+        },
+        "09:41": {
+          "status": "free",
+          "spot": "Selasar Gd Baru",
+          "note": "Game prototype testing"
+        },
+        "11:30": {
+          "status": "free",
+          "spot": "Kantin Pacil",
+          "note": "Lunch with Abizar"
+        },
+        "13:30": {
+          "status": "in_class",
+          "course": "Sistem Operasi",
+          "room": "A6.09 (Ged Baru)",
+          "time": "13:00 - 14:40"
+        },
+        "15:45": {
+          "status": "free",
+          "spot": "Lab A1.01",
+          "note": "Godot Engine sprint"
+        }
+      }
+    },
+    {
+      "id": "nina",
+      "name": "nina",
+      "tag": "ilpus.26",
+      "av": "nina",
+      "schedule": {
+        "08:30": {
+          "status": "free",
+          "spot": "Kantin Pacil",
+          "note": "Numpang wifi pacil"
+        },
+        "09:41": {
+          "status": "free",
+          "spot": "Kantin Pacil",
+          "note": "Numpang nugas di pacil"
+        },
+        "11:30": {
+          "status": "free",
+          "spot": "Kantin Pacil",
+          "note": "Jajan es teh kantin"
+        },
+        "13:30": {
+          "status": "in_class",
+          "course": "Pengantar Ilmu Informasi",
+          "room": "Ged FIB 1.1",
+          "time": "13:00 - 15:30"
+        },
+        "15:45": {
+          "status": "free",
+          "spot": "Perpus Pacil Lt. 2",
+          "note": "Balik ke pacil lagi"
+        }
+      }
+    }
+  ]
+}

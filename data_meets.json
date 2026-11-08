@@ -1,0 +1,229 @@
+[
+  {
+    "id": "django",
+    "title": "Django Discussion",
+    "openedBy": "imanuel",
+    "hostAv": "imanuel",
+    "hostTag": "cs.26",
+    "avatars": [
+      "imanuel",
+      "maiza",
+      "me"
+    ],
+    "attendees": [
+      {
+        "id": "maiza",
+        "name": "maiza",
+        "tag": "cs.26",
+        "av": "maiza"
+      },
+      {
+        "id": "me",
+        "name": "bian/varo",
+        "tag": "cs.26",
+        "av": "me",
+        "isMe": true
+      }
+    ],
+    "tags": [
+      "WebDev",
+      "Lab A1.01"
+    ],
+    "mine": true
+  },
+  {
+    "id": "basdat",
+    "title": "BasDat study",
+    "openedBy": "kejambreet",
+    "hostAv": "kejambreet",
+    "hostTag": "cs.26",
+    "avatars": [
+      "kejambreet",
+      "fiqhi",
+      "setip"
+    ],
+    "attendees": [
+      {
+        "id": "fiqhi",
+        "name": "fiqhi",
+        "tag": "cs.26",
+        "av": "fiqhi"
+      },
+      {
+        "id": "setip",
+        "name": "setip",
+        "tag": "cs.26",
+        "av": "setip"
+      }
+    ],
+    "tags": [
+      "Pacillian Studies",
+      "A6.07 (Ged Baru)"
+    ],
+    "mine": false
+  },
+  {
+    "id": "manbis",
+    "title": "MANBIS OMAIGAT",
+    "openedBy": "cryinfairys",
+    "hostAv": "cryinfairys",
+    "hostTag": "cs.26",
+    "avatars": [
+      "cryinfairys",
+      "nonapacil",
+      "peypuy"
+    ],
+    "attendees": [
+      {
+        "id": "nonapacil",
+        "name": "nonapacil",
+        "tag": "si.26",
+        "av": "nonapacil"
+      },
+      {
+        "id": "peypuy",
+        "name": "peypuy",
+        "tag": "cs.26",
+        "av": "peypuy"
+      }
+    ],
+    "tags": [
+      "MANBIS",
+      "Stulo 1"
+    ],
+    "mine": false
+  },
+  {
+    "id": "stress",
+    "title": "stress anum",
+    "openedBy": "ajen",
+    "hostAv": "ajen",
+    "hostTag": "cs.26",
+    "avatars": [
+      "ajen",
+      "rafif",
+      "jonathan"
+    ],
+    "attendees": [
+      {
+        "id": "rafif",
+        "name": "rafif",
+        "tag": "cs.26",
+        "av": "rafif"
+      },
+      {
+        "id": "jonathan",
+        "name": "jonathan",
+        "tag": "cs.26",
+        "av": "jonathan"
+      }
+    ],
+    "tags": [
+      "Pacillian Studies",
+      "A1.10 (Ged Lama)"
+    ],
+    "mine": false
+  },
+  {
+    "id": "audi",
+    "title": "audition for ZELLASEYE 💜",
+    "openedBy": "thealpharaoh",
+    "hostAv": "thealpharaoh",
+    "hostTag": "cs.26",
+    "avatars": [
+      "thealpharaoh",
+      "binar",
+      "misha"
+    ],
+    "attendees": [
+      {
+        "id": "binar",
+        "name": "binar",
+        "tag": "cs.26",
+        "av": "binar"
+      },
+      {
+        "id": "misha",
+        "name": "misha",
+        "tag": "cs.26",
+        "av": "misha"
+      }
+    ],
+    "tags": [
+      "Casual",
+      "A5.51 (Ged Baru)"
+    ],
+    "mine": false
+  },
+  {
+    "id": "ilpus",
+    "title": "ilpus numpang di pacil <3",
+    "openedBy": "nina",
+    "hostAv": "nina",
+    "hostTag": "ilpus.26",
+    "avatars": [
+      "nina"
+    ],
+    "attendees": [],
+    "tags": [
+      "Casual",
+      "Kantin Pacil"
+    ],
+    "mine": false
+  },
+  {
+    "id": "pbp",
+    "title": "pbp ya allah",
+    "openedBy": "cindireulla",
+    "hostAv": "cindireulla",
+    "hostTag": "cs.26",
+    "avatars": [
+      "cindireulla",
+      "ezar",
+      "nami"
+    ],
+    "attendees": [
+      {
+        "id": "ezar",
+        "name": "ezar",
+        "tag": "cs.26",
+        "av": "ezar"
+      },
+      {
+        "id": "nami",
+        "name": "nami",
+        "tag": "cs.26",
+        "av": "nami"
+      }
+    ],
+    "tags": [
+      "Pacillian Studies",
+      "A5.51 (Ged Baru)"
+    ],
+    "mine": false
+  },
+  {
+    "id": "game",
+    "title": "MIKIRIN KONSEP GAME",
+    "openedBy": "benishere",
+    "hostAv": "benishere",
+    "hostTag": "cs.26",
+    "avatars": [
+      "benishere",
+      "abizar"
+    ],
+    "attendees": [
+      {
+        "id": "abizar",
+        "name": "abizar",
+        "tag": "cs.26",
+        "av": "abizar"
+      }
+    ],
+    "tags": [
+      "GameDev",
+      "Selasar Gd Baru"
+    ],
+    "mine": false
+  }
+]

@@ -1,0 +1,123 @@
+01.01 - Kedokteran:
+	 - 00: General
+	 
+02.01 - Kedokteran Gigi:
+	 - 00: General
+
+03.01 - Matematika dan Ilmu Pengetahuan Alam:
+	 - 01: Matematika
+	 - 02: Fisika
+	 - 03: Kimia
+	 - 04: Biologi
+	 - 05: Farmasi // obsolete
+	 - 06: Geografi
+
+04.01 - Teknik:
+	 - 00: Profesi
+	 - 01: Sipil
+	 - 02: Mesin
+	 - 03: Elektro
+	 - 04: Metalurgi dan Material
+	 - 05: Arsitektur
+	 - 06: Kimia dan Bioproses
+	 - 07: Industri
+
+05.01 - Hukum:
+	 - 00: General
+
+06.01 - Ekonomi dan Bisnis:
+	 - 01: Ilmu Ekonomi
+	 - 02: Manajemen
+	 - 03: Akuntansi
+
+07.01 - Ilmu Pengetahuan Budaya:
+	 - 00: Sastra dan Bahasa
+	 - 01: Arkeologi
+	 - 02: Filsafat
+	 - 03: Ilmu Perpustakaan
+	 - 04: Pascasarjana Linguistik
+	 - 05: Pascasarjana Susastra
+	 - 06: Ilmu Sejarah
+
+08.01 - Psikologi:
+	 - 00: General
+
+09.01 - Ilmu Sosial dan Ilmu Politik:
+	 - 01: Ilmu Komunikasi
+	 - 02: Ilmu Politik
+	 - 03: Ilmu Administrasi // obsolete
+	 - 04: Sosiologi
+	 - 05: Kriminologi
+	 - 06: Ilmu Kesejahteraan Sosial
+	 - 07: Antropologi
+	 - 08: Ilmu Hubungan Internasional
+
+10.01 - Kesehatan Masyarakat:
+	 - 00: Kesehatan Masyarakat dan Lingkungan
+	 - 01: Pelayanan Rumah Sakit
+	 - 03: Pascasarjana Epidemiologis
+	 - 04: Ilmu Gizi
+	 - 06: K3
+	 - 07: Humas Kesehatan
+
+12.01 - Ilmu Komputer:
+	 - 00: General
+
+13.01 - Ilmu Keperawatan:
+	 - 00: General
+
+14.01 - Pascasarjana:
+	 - 00: General // obsolete
+
+15.01 - Pendidikan Vokasi:
+	 - 00:
+		 - Administrasi Rumah Sakit, D3
+		 - Fisioterapi, D3
+		 - Okupasi Terapi, D3
+		 - Akuntansi, D3
+		 - Manajemen Rekod dan Arsip, D3
+		 - Hubungan Masyarakat, D3
+		 - Administrasi Asuransi dan Aktuaria, D3
+		 - Administrasi Keuangan dan Perbankan, D3
+		 - Administrasi Perkantoran, D3
+		 - Administrasi Perpajakan, D3
+		 - Pariwisata, D3
+		 - Periklanan Kreatif, D3
+		 - Penyiaran Multimedia, D3
+	 - 01:
+		 - Manajemen Bisnis Pariwisata, D4
+		 - Manajemen Rekod dan Arsip, D4
+		 - Bisnis Kreatif, D4
+		 - Produksi Media, D4
+		 - Fisioterapi, D4
+		 - Terapi Okupasi, D4
+	 - 02:
+		 - Industri Kreatif, S2 Terapan
+
+17.01 - Farmasi:
+	 - 00: General
+
+18.01 - Ilmu Administrasi:
+	 - 00: General
+
+19.01 - Pascasarjana Pembangunan Berkelanjutan:
+	 - 00: General // obsolete
+
+20.01 - Pascasarjana Pembangunan Berkelanjutan:
+	 - 00: General // obsolete
+
+21.01 - Pascasarjana Pembangunan Berkelanjutan:
+	 - 00: Doktoral Ilmu Lingkungan dan KSG
+	 - 01: Magister Ilmu Lingkungan dan Bencana
+	 - 02: Magister Sosial
+	 - 03: Magister Kajian Wilayah
+
+51.01 - Rumah Sakit Jantung dan Pembuluh Darah Harapan Kita:
+	 - 00: General
+
+52.01 - Rumah Sakit Anak dan Bunda Harapan Kita:
+	 - 00: General
+
+53.01 - Rumah Sakit Kanker Dharmais:
+	 - 00: General
+
