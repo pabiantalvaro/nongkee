@@ -1,6 +1,8 @@
 from datetime import timedelta
+import requests
 
-from django.contrib.auth import login
+from django.conf import settings
+from django.contrib.auth import get_user_model, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.db import IntegrityError, transaction
@@ -11,11 +13,14 @@ from django.urls import reverse
 from django.utils import timezone
 from django.utils.http import url_has_allowed_host_and_scheme
 from django.views.decorators.cache import never_cache
+from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_GET, require_http_methods, require_POST
 
 from .forms import CreateMeetForm, SlotForm
-from .models import Meet, Participation, RoomUse
-from .timetable import BUILDINGS, DAYS, initial_slot, local_end, local_start, room_keys, room_options, timetable
+from .models import ChatMessage, Friendship, Meet, Participation, RoomUse, UserProfile
+from .timetable import BUILDINGS, DAYS, get_user_status, initial_slot, local_end, local_start, room_keys, room_options, timetable
+
+User = get_user_model()
 
 
 def meet_queryset():
@@ -194,3 +199,235 @@ def signup(request):
         login(request, form.save())
         return redirect(next_url or 'meets:home')
     return render(request, 'meets/auth.html', {'form': form, 'signup': True, 'next': next_url})
+
+
+@require_GET
+def friends_view(request):
+    if not request.user.is_authenticated:
+        demo_profiles = UserProfile.objects.select_related('user').all()[:8]
+        demo_list = []
+        for p in demo_profiles:
+            demo_list.append({
+                'user': p.user,
+                'profile': p,
+                'status': get_user_status(p.user),
+            })
+        return render(request, 'meets/friends.html', {
+            'authenticated': False,
+            'friends': demo_list,
+            'my_meets': [],
+        })
+
+    # Ensure profile for user
+    profile, _ = UserProfile.objects.get_or_create(user=request.user)
+    if not profile.display_name:
+        profile.display_name = request.user.username.title()
+        profile.save()
+
+    # Friends list
+    friendships = Friendship.objects.filter(
+        user=request.user,
+        status=Friendship.Status.ACCEPTED,
+    ).select_related('friend', 'friend__profile')
+
+    friends_list = []
+    for f in friendships:
+        friend_user = f.friend
+        status = get_user_status(friend_user)
+        friends_list.append({
+            'user': friend_user,
+            'profile': getattr(friend_user, 'profile', None),
+            'status': status,
+            'friendship_id': f.pk,
+        })
+
+    # Priority sorting: ongoing meets first, ongoing classes second, free third
+    state_order = {'meet': 0, 'class': 1, 'free': 2}
+    friends_list.sort(key=lambda item: (state_order.get(item['status']['state'], 3), item['user'].username))
+
+    # Incoming pending requests
+    pending_incoming = Friendship.objects.filter(
+        friend=request.user,
+        status=Friendship.Status.PENDING,
+    ).select_related('user', 'user__profile')
+
+    # Suggested Pacil classmates
+    friend_ids = {f.friend_id for f in friendships}
+    friend_ids.add(request.user.id)
+    suggested = User.objects.exclude(id__in=friend_ids).select_related('profile')[:6]
+
+    # My meets summary (hosted or joined)
+    my_meets = meet_queryset().filter(Q(host=request.user) | Q(participants__user=request.user)).distinct()
+    my_meets_list = []
+    for m in my_meets:
+        details = detail_context(m, request.user)
+        details['avatars'] = [m.host] + [mbr.user for mbr in details['attendees']]
+        my_meets_list.append(details)
+
+    return render(request, 'meets/friends.html', {
+        'authenticated': True,
+        'friends': friends_list,
+        'pending_requests': pending_incoming,
+        'suggested': suggested,
+        'my_meets': my_meets_list,
+        'my_status': get_user_status(request.user),
+    })
+
+
+@login_required
+@require_POST
+def friends_action(request):
+    action = request.POST.get('action')  # 'add', 'accept', 'decline', 'remove'
+    target_username = request.POST.get('username')
+    target_id = request.POST.get('user_id')
+
+    target_user = None
+    if target_username:
+        target_user = User.objects.filter(username=target_username.strip().lower()).first()
+    elif target_id and target_id.isdecimal():
+        target_user = User.objects.filter(pk=int(target_id)).first()
+
+    if target_user and target_user != request.user:
+        if action == 'add':
+            Friendship.objects.get_or_create(user=request.user, friend=target_user, defaults={'status': Friendship.Status.ACCEPTED})
+            Friendship.objects.get_or_create(user=target_user, friend=request.user, defaults={'status': Friendship.Status.ACCEPTED})
+        elif action == 'remove':
+            Friendship.objects.filter(
+                Q(user=request.user, friend=target_user) | Q(user=target_user, friend=request.user)
+            ).delete()
+        elif action == 'accept':
+            Friendship.objects.filter(user=target_user, friend=request.user).update(status=Friendship.Status.ACCEPTED)
+            Friendship.objects.get_or_create(user=request.user, friend=target_user, defaults={'status': Friendship.Status.ACCEPTED})
+        elif action == 'decline':
+            Friendship.objects.filter(user=target_user, friend=request.user).delete()
+
+    return redirect('meets:friends')
+
+
+@login_required
+def chat_messages(request):
+    if request.method == 'GET':
+        meet_id = request.GET.get('meet')
+        friend_id = request.GET.get('friend')
+        since_id = request.GET.get('since', 0)
+
+        try:
+            since_id = int(since_id)
+        except ValueError:
+            since_id = 0
+
+        qs = ChatMessage.objects.select_related('sender', 'sender__profile')
+        if meet_id and meet_id.isdecimal():
+            qs = qs.filter(meet_id=int(meet_id))
+        elif friend_id and friend_id.isdecimal():
+            fid = int(friend_id)
+            qs = qs.filter(
+                (Q(sender=request.user, recipient_id=fid) | Q(sender_id=fid, recipient=request.user))
+            )
+        else:
+            return JsonResponse({'error': 'Specify meet or friend ID.'}, status=400)
+
+        if since_id > 0:
+            qs = qs.filter(id__gt=since_id)
+        else:
+            qs = qs.order_by('-created_at')[:40]
+            qs = list(reversed(qs))
+
+        messages = []
+        for msg in qs:
+            profile = getattr(msg.sender, 'profile', None)
+            sender_name = profile.display_name if profile and profile.display_name else msg.sender.username
+            messages.append({
+                'id': msg.id,
+                'sender': msg.sender.username,
+                'sender_name': sender_name,
+                'text': msg.text,
+                'time': timezone.localtime(msg.created_at).strftime('%H:%M'),
+                'is_me': msg.sender_id == request.user.id,
+            })
+        return JsonResponse({'messages': messages})
+
+    elif request.method == 'POST':
+        meet_id = request.POST.get('meet_id')
+        recipient_id = request.POST.get('recipient_id')
+        text = (request.POST.get('text') or '').strip()
+
+        if not text:
+            return JsonResponse({'error': 'Message cannot be empty.'}, status=400)
+
+        meet = None
+        recipient = None
+        if meet_id and meet_id.isdecimal():
+            meet = get_object_or_404(Meet, pk=int(meet_id))
+        elif recipient_id and recipient_id.isdecimal():
+            recipient = get_object_or_404(User, pk=int(recipient_id))
+        else:
+            return JsonResponse({'error': 'Destination not specified.'}, status=400)
+
+        msg = ChatMessage.objects.create(
+            sender=request.user,
+            meet=meet,
+            recipient=recipient,
+            text=text[:1200],
+        )
+        profile = getattr(request.user, 'profile', None)
+        return JsonResponse({
+            'message': {
+                'id': msg.id,
+                'sender': request.user.username,
+                'sender_name': profile.display_name if profile and profile.display_name else request.user.username,
+                'text': msg.text,
+                'time': timezone.localtime(msg.created_at).strftime('%H:%M'),
+                'is_me': True,
+            }
+        }, status=201)
+
+
+@csrf_exempt
+@require_POST
+def google_auth(request):
+    token = request.POST.get('credential') or request.POST.get('id_token')
+    demo_email = request.POST.get('demo_email')
+
+    email = None
+    name = None
+    picture = ''
+
+    if token:
+        try:
+            resp = requests.get(f'https://oauth2.googleapis.com/tokeninfo?id_token={token}', timeout=5)
+            if resp.status_code == 200:
+                data = resp.json()
+                email = data.get('email')
+                name = data.get('name') or data.get('given_name')
+                picture = data.get('picture', '')
+        except Exception:
+            pass
+
+    if not email and demo_email:
+        email = demo_email.strip().lower()
+        name = email.split('@')[0].replace('.', ' ').title()
+
+    if not email:
+        return JsonResponse({'error': 'Missing or invalid Google sign-in credentials.'}, status=400)
+
+    username = email.split('@')[0][:30].lower()
+    user, created = User.objects.get_or_create(username=username, defaults={'email': email})
+    if created or not user.email:
+        user.email = email
+        user.save()
+
+    profile, _ = UserProfile.objects.get_or_create(user=user)
+    if name and not profile.display_name:
+        profile.display_name = name
+    if picture and not profile.avatar_url:
+        profile.avatar_url = picture
+    profile.save()
+
+    login(request, user)
+    request.session.set_expiry(60 * 60 * 24 * 365)  # 1 year persistent session
+
+    next_url = request.POST.get('next') or request.GET.get('next') or reverse('meets:home')
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest' or request.content_type == 'application/json':
+        return JsonResponse({'success': True, 'redirect': next_url})
+    return redirect(next_url)

@@ -1,0 +1,255 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Friends & Radar · nongkee</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'meets/nongkee.css' %}">
+  <script src="{% static 'meets/nongkee.js' %}" defer></script>
+</head>
+<body>
+<div id="stage" class="stage friends-stage" data-chat-url="{% url 'meets:chat_messages' %}">
+  <header>
+    <a href="{% url 'meets:home' %}" aria-label="nongkee home">
+      <svg class="logo" width="98" height="72" viewBox="0 0 98 72" fill="none" stroke="#2ccf72" stroke-width="3.5" stroke-linecap="round" aria-hidden="true">
+        <circle cx="49" cy="37" r="30"/><circle cx="19" cy="37" r="7"/><circle cx="79" cy="37" r="7"/>
+        <ellipse cx="49" cy="40" rx="20" ry="17"/><circle cx="41" cy="36" r="5" fill="#2ccf72"/><circle cx="57" cy="36" r="5" fill="#2ccf72"/>
+        <path d="M43 48q6 5 12 0"/><path d="M36 9q13-9 26 0"/>
+      </svg>
+      <div class="word">nongkee</div>
+    </a>
+    <div class="who">
+      {% if user.is_authenticated %}
+        <b>{{ user.get_username }}</b>
+        <form method="post" action="{% url 'meets:logout' %}">{% csrf_token %}<button type="submit" class="text-button">Sign out</button></form>
+      {% else %}
+        <a href="{% url 'meets:login' %}?next={{ request.path|urlencode }}">Sign in</a>
+      {% endif %}
+    </div>
+    <div class="av me-av" aria-hidden="true">{% if user.is_authenticated %}{{ user.get_username|first|upper }}{% endif %}</div>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <a class="nav-item" href="{% url 'meets:rooms_page' %}" aria-label="Kelas Kosong">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      <span class="tooltip">Kelas Kosong</span>
+    </a>
+    <a class="nav-item" href="{% url 'meets:home' %}" aria-label="Open Meets">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/><path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/><path d="M5 18v2M19 18v2"/></svg>
+      <span class="tooltip">Open Meets</span>
+    </a>
+    <a class="nav-item on" href="{% url 'meets:friends' %}" aria-label="Friends & Radar" aria-current="page">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <span class="tooltip">Friends & Radar</span>
+    </a>
+  </nav>
+
+  <main id="friendsMain" class="friends-layout">
+    <div class="friends-header">
+      <div class="friends-title-box">
+        <h1 class="friends-page-title">Friends Radar</h1>
+        <p class="friends-page-subtitle">Live status & whereabouts of your Pacil study circle</p>
+      </div>
+      {% if authenticated %}
+        <div class="my-status-card">
+          <span class="my-status-label">Your Live Status:</span>
+          <span class="status-pill {{ my_status.badge_class }}">{{ my_status.badge }}</span>
+          <span class="my-status-desc">{{ my_status.desc }}</span>
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- Navigation Subtabs: Friends vs My Meets -->
+    <div class="friends-tabs" role="tablist">
+      <button type="button" class="ftab on" id="tabFriendsBtn" role="tab" aria-selected="true" data-tab="tabFriends">Friends Circle ({{ friends|length }})</button>
+      <button type="button" class="ftab" id="tabMeetsBtn" role="tab" aria-selected="false" data-tab="tabMeets">My Scheduled Meets ({{ my_meets|length }})</button>
+    </div>
+
+    <!-- TAB 1: FRIENDS CIRCLE -->
+    <section id="tabFriends" class="tab-panel on" role="tabpanel">
+      <!-- Add Friend Bar -->
+      {% if authenticated %}
+        <form class="add-friend-bar" action="{% url 'meets:friends_action' %}" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="action" value="add">
+          <div class="add-friend-input-wrap">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="text" name="username" class="add-friend-input" placeholder="Add friend by username (e.g. nonapacil, cryinfairys)..." required>
+          </div>
+          <button type="submit" class="add-btn">+ Add Friend</button>
+        </form>
+      {% else %}
+        <div class="auth-notice-card">
+          <p>Sign in to add friends, track where your classmates are right now, and chat live!</p>
+          <a class="launch-btn mini" href="{% url 'meets:login' %}?next={% url 'meets:friends' %}">Sign In / Sign Up</a>
+        </div>
+      {% endif %}
+
+      <!-- Pending Requests -->
+      {% if pending_requests %}
+        <div class="pending-section">
+          <h2>Pending Friend Requests</h2>
+          <div class="pending-list">
+            {% for req in pending_requests %}
+              <div class="pending-card">
+                <div class="av" aria-hidden="true">{{ req.user.username|first|upper }}</div>
+                <div class="pending-info">
+                  <strong>{{ req.user.profile.display_name|default:req.user.username }}</strong>
+                  <span>@{{ req.user.username }}</span>
+                </div>
+                <form action="{% url 'meets:friends_action' %}" method="post" class="pending-actions">
+                  {% csrf_token %}
+                  <input type="hidden" name="user_id" value="{{ req.user.pk }}">
+                  <button type="submit" name="action" value="accept" class="mini-pill accept">Accept</button>
+                  <button type="submit" name="action" value="decline" class="mini-pill decline">Decline</button>
+                </form>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      <!-- Friends Radar Cards Grid -->
+      <div class="friends-grid">
+        {% for item in friends %}
+          <article class="friend-card {{ item.status.badge_class }}-card">
+            <div class="friend-top">
+              <div class="friend-identity">
+                <div class="av friend-av" aria-hidden="true">{{ item.user.username|first|upper }}</div>
+                <div>
+                  <h2 class="friend-name">{{ item.profile.display_name|default:item.user.username }}</h2>
+                  <div class="friend-meta">@{{ item.user.username }} · {{ item.profile.major|default:'Ilmu Komputer' }}</div>
+                </div>
+              </div>
+              <span class="status-pill {{ item.status.badge_class }}">{{ item.status.badge }}</span>
+            </div>
+
+            <div class="friend-status-body">
+              <div class="status-icon-row">
+                {% if item.status.state == 'meet' %}
+                  <span class="status-bubble-icon">📍</span>
+                  <div class="status-details">
+                    <strong class="status-headline">{{ item.status.title }}</strong>
+                    <span class="status-sub">{{ item.status.desc }} · {{ item.status.time }} WIB</span>
+                  </div>
+                {% elif item.status.state == 'class' %}
+                  <span class="status-bubble-icon">📚</span>
+                  <div class="status-details">
+                    <strong class="status-headline">{{ item.status.title }}</strong>
+                    <span class="status-sub">{{ item.status.desc }} ({{ item.status.time }})</span>
+                  </div>
+                {% else %}
+                  <span class="status-bubble-icon">🟢</span>
+                  <div class="status-details">
+                    <strong class="status-headline">Free / Nongkee-ready</strong>
+                    <span class="status-sub">{{ item.profile.bio|default:'Bisa diajak ngoding / nongkrong' }}</span>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="friend-actions">
+              {% if authenticated %}
+                <button type="button" class="open-chat-btn" data-chat-user-id="{{ item.user.pk }}" data-chat-user-name="{{ item.profile.display_name|default:item.user.username }}">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  <span>Chat</span>
+                </button>
+              {% else %}
+                <a class="open-chat-btn" href="{% url 'meets:login' %}?next={% url 'meets:friends' %}">Sign in to Chat</a>
+              {% endif %}
+
+              {% if item.status.state == 'meet' and item.status.meet_id %}
+                <a class="view-meet-btn" href="{% url 'meets:home' %}?meet={{ item.status.meet_id }}">Lihat Meet</a>
+              {% elif item.status.state == 'free' and authenticated %}
+                <button type="button" class="ajak-btn" data-invite-user="{{ item.user.username }}">+ Ajak Nongkee</button>
+              {% endif %}
+            </div>
+          </article>
+        {% empty %}
+          <div class="empty-state">
+            <p>Belum ada teman di radar kamu. Tambahkan username temanmu di atas!</p>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- Suggested Classmates -->
+      {% if suggested %}
+        <div class="suggested-section">
+          <h2>Teman Angkatan Pacil Lainnya</h2>
+          <div class="suggested-row">
+            {% for u in suggested %}
+              <div class="suggested-chip">
+                <div class="av mini-av" aria-hidden="true">{{ u.username|first|upper }}</div>
+                <div class="suggested-text">
+                  <strong>{{ u.profile.display_name|default:u.username }}</strong>
+                  <span>@{{ u.username }}</span>
+                </div>
+                {% if authenticated %}
+                  <form action="{% url 'meets:friends_action' %}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="action" value="add">
+                    <input type="hidden" name="user_id" value="{{ u.pk }}">
+                    <button type="submit" class="mini-add-btn">+ Add</button>
+                  </form>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </section>
+
+    <!-- TAB 2: MY MEETS SCHEDULE -->
+    <section id="tabMeets" class="tab-panel" role="tabpanel" hidden>
+      <div class="my-meets-grid">
+        {% for item in my_meets %}
+          <a class="card mine" href="{% url 'meets:home' %}?meet={{ item.meet.pk }}">
+            <div class="avs" aria-hidden="true">
+              {% for attendee in item.avatars|slice:':3' %}<div class="av{% if forloop.first %} big{% endif %}{% if attendee == user %} me{% endif %}">{{ attendee.get_username|first|upper }}</div>{% endfor %}
+              {% if item.extra %}<span class="cnt">+{{ item.extra }}</span>{% endif %}
+            </div>
+            <div class="t">{{ item.meet.title }}</div>
+            <div class="o">opened by: {{ item.meet.host.get_username }}</div>
+            <div class="tags"><span class="tag">{{ item.meet.get_topic_display }}</span><span class="tag room-tag">📍 {{ item.meet.room }}</span></div>
+          </a>
+        {% empty %}
+          <div class="empty-state">
+            <p>You haven't hosted or joined any meets yet.</p>
+            <a href="{% url 'meets:home' %}" class="launch-btn mini">Browse Open Meets</a>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+
+  <!-- Live Direct Chat Drawer -->
+  <aside id="chatDrawer" class="chat-drawer" role="dialog" aria-modal="true" aria-labelledby="chatDrawerTitle" hidden>
+    <div class="chat-drawer-header">
+      <div class="chat-peer-info">
+        <div class="av chat-peer-av" id="chatPeerAv">?</div>
+        <div>
+          <h2 id="chatDrawerTitle" class="chat-peer-name">Chat</h2>
+          <span class="chat-peer-status" id="chatPeerStatus">Online</span>
+        </div>
+      </div>
+      <button type="button" class="close-btn" id="closeChatDrawer" aria-label="Close chat">×</button>
+    </div>
+
+    <div class="chat-messages-container" id="chatMessagesBox" aria-live="polite">
+      <div class="chat-empty-msg">No messages yet. Say hello!</div>
+    </div>
+
+    <form id="chatSendForm" class="chat-input-bar">
+      {% csrf_token %}
+      <input type="hidden" name="recipient_id" id="chatRecipientId" value="">
+      <input type="text" name="text" id="chatTextInput" class="chat-input-txt" placeholder="Type a message (press Enter)..." required autocomplete="off">
+      <button type="submit" class="chat-send-btn" aria-label="Send message">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+      </button>
+    </form>
+  </aside>
+</div>
+</body>
+</html>

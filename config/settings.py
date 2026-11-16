@@ -116,6 +116,14 @@ LOGIN_URL = 'meets:login'
 LOGIN_REDIRECT_URL = 'meets:home'
 LOGOUT_REDIRECT_URL = 'meets:home'
 
+# Persistent Session (Stay signed in until user explicitly logs out)
+SESSION_COOKIE_AGE = 60 * 60 * 24 * 365  # 1 year in seconds
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+SESSION_SAVE_EVERY_REQUEST = True
+
+# Google OAuth Client ID (optional config, demo fallback enabled)
+GOOGLE_CLIENT_ID = '93654965-demo-nongkee.apps.googleusercontent.com'
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.1/howto/static-files/

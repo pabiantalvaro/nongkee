@@ -197,3 +197,179 @@ detail.addEventListener('submit', event => {
   if (prompt && !window.confirm(prompt)) event.preventDefault();
 });
 if (!detail.hidden) setModal('detail');
+
+// ================= FRIENDS PAGE & CHAT SYSTEM =================
+const chatUrl = stage?.dataset?.chatUrl || '/api/chat/messages/';
+let chatPollTimer = null;
+let currentChatFriendId = null;
+let currentMeetId = null;
+
+// Tab switcher on Friends Page
+const tabFriendsBtn = document.querySelector('#tabFriendsBtn');
+const tabMeetsBtn = document.querySelector('#tabMeetsBtn');
+const tabFriends = document.querySelector('#tabFriends');
+const tabMeets = document.querySelector('#tabMeets');
+
+if (tabFriendsBtn && tabMeetsBtn) {
+  tabFriendsBtn.addEventListener('click', () => {
+    tabFriendsBtn.classList.add('on');
+    tabFriendsBtn.setAttribute('aria-selected', 'true');
+    tabMeetsBtn.classList.remove('on');
+    tabMeetsBtn.setAttribute('aria-selected', 'false');
+    if (tabFriends) tabFriends.hidden = false;
+    if (tabMeets) tabMeets.hidden = true;
+  });
+
+  tabMeetsBtn.addEventListener('click', () => {
+    tabMeetsBtn.classList.add('on');
+    tabMeetsBtn.setAttribute('aria-selected', 'true');
+    tabFriendsBtn.classList.remove('on');
+    tabFriendsBtn.setAttribute('aria-selected', 'false');
+    if (tabFriends) tabFriends.hidden = true;
+    if (tabMeets) tabMeets.hidden = false;
+  });
+}
+
+// Direct Chat Drawer
+const chatDrawer = document.querySelector('#chatDrawer');
+const chatMessagesBox = document.querySelector('#chatMessagesBox');
+const chatSendForm = document.querySelector('#chatSendForm');
+const chatRecipientId = document.querySelector('#chatRecipientId');
+const chatTextInput = document.querySelector('#chatTextInput');
+const chatPeerName = document.querySelector('#chatDrawerTitle');
+const chatPeerAv = document.querySelector('#chatPeerAv');
+const closeChatDrawer = document.querySelector('#closeChatDrawer');
+
+function formatChatBubble(msg) {
+  return `
+    <div class="chat-bubble ${msg.is_me ? 'me' : 'them'}">
+      <div class="chat-bubble-author">${msg.sender_name}</div>
+      <div class="chat-bubble-text">${msg.text}</div>
+      <div class="chat-bubble-time">${msg.time}</div>
+    </div>
+  `;
+}
+
+async function loadDirectChat(friendId, friendName) {
+  currentChatFriendId = friendId;
+  if (chatRecipientId) chatRecipientId.value = friendId;
+  if (chatPeerName) chatPeerName.textContent = friendName || 'Chat';
+  if (chatPeerAv) chatPeerAv.textContent = (friendName || '?')[0].toUpperCase();
+  if (chatDrawer) chatDrawer.hidden = false;
+  if (chatTextInput) chatTextInput.focus();
+
+  await pollDirectChat();
+  clearInterval(chatPollTimer);
+  chatPollTimer = setInterval(pollDirectChat, 2500);
+}
+
+async function pollDirectChat() {
+  if (!currentChatFriendId || !chatMessagesBox) return;
+  try {
+    const res = await fetch(`${chatUrl}?friend=${currentChatFriendId}`);
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data.messages && data.messages.length > 0) {
+      chatMessagesBox.innerHTML = data.messages.map(formatChatBubble).join('');
+      chatMessagesBox.scrollTop = chatMessagesBox.scrollHeight;
+    } else {
+      chatMessagesBox.innerHTML = '<div class="chat-empty-msg">No messages yet. Say hello!</div>';
+    }
+  } catch (e) {
+    // silently catch network poll errors
+  }
+}
+
+if (closeChatDrawer) {
+  closeChatDrawer.addEventListener('click', () => {
+    if (chatDrawer) chatDrawer.hidden = true;
+    currentChatFriendId = null;
+    clearInterval(chatPollTimer);
+  });
+}
+
+document.addEventListener('click', event => {
+  const chatBtn = event.target.closest('[data-chat-user-id]');
+  if (chatBtn) {
+    const uid = chatBtn.dataset.chatUserId;
+    const uname = chatBtn.dataset.chatUserName;
+    loadDirectChat(uid, uname);
+  }
+
+  const ajakBtn = event.target.closest('[data-invite-user]');
+  if (ajakBtn) {
+    const target = ajakBtn.dataset.inviteUser;
+    const titleInput = document.querySelector('#newTitle');
+    if (titleInput) titleInput.value = `Nongkee bareng @${target}`;
+    openCreate(ajakBtn);
+  }
+});
+
+if (chatSendForm) {
+  chatSendForm.addEventListener('submit', async event => {
+    event.preventDefault();
+    const text = chatTextInput.value.trim();
+    if (!text || !currentChatFriendId) return;
+
+    const body = new FormData(chatSendForm);
+    chatTextInput.value = '';
+
+    try {
+      const res = await fetch(chatUrl, { method: 'POST', body: body });
+      if (res.ok) {
+        await pollDirectChat();
+      }
+    } catch (e) {}
+  });
+}
+
+// Meet Chat logic inside Meet Detail modal
+let meetChatTimer = null;
+
+async function pollMeetChat(meetId) {
+  const box = document.querySelector('#meetChatBox');
+  if (!box || !meetId) return;
+  try {
+    const res = await fetch(`${chatUrl}?meet=${meetId}`);
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data.messages && data.messages.length > 0) {
+      box.innerHTML = data.messages.map(formatChatBubble).join('');
+      box.scrollTop = box.scrollHeight;
+    } else {
+      box.innerHTML = '<div class="chat-empty-msg">No messages yet. Say hi to fellow nongkeers!</div>';
+    }
+  } catch (e) {}
+}
+
+const originalSetModal = setModal;
+setModal = function(name, trigger) {
+  originalSetModal(name, trigger);
+  clearInterval(meetChatTimer);
+  if (name === 'detail') {
+    const meetBox = document.querySelector('.meet-chat-section');
+    if (meetBox && meetBox.dataset.meetId) {
+      const mid = meetBox.dataset.meetId;
+      pollMeetChat(mid);
+      meetChatTimer = setInterval(() => pollMeetChat(mid), 2500);
+
+      const meetForm = document.querySelector('#meetChatForm');
+      if (meetForm && !meetForm._bound) {
+        meetForm._bound = true;
+        meetForm.addEventListener('submit', async ev => {
+          ev.preventDefault();
+          const input = meetForm.querySelector('.meet-chat-input');
+          const txt = input.value.trim();
+          if (!txt) return;
+          const body = new FormData(meetForm);
+          input.value = '';
+          try {
+            const resp = await fetch(chatUrl, { method: 'POST', body: body });
+            if (resp.ok) await pollMeetChat(mid);
+          } catch (e) {}
+        });
+      }
+    }
+  }
+};
+

@@ -58,3 +58,52 @@ class Participation(models.Model):
     class Meta:
         ordering = ['pk']
         constraints = [models.UniqueConstraint(fields=['meet', 'user'], name='unique_meet_participant')]
+
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='profile')
+    display_name = models.CharField(max_length=100, blank=True)
+    avatar_url = models.CharField(max_length=300, blank=True, default='')
+    npm = models.CharField(max_length=20, blank=True, default='')
+    major = models.CharField(max_length=60, default='Ilmu Komputer')
+    bio = models.CharField(max_length=200, blank=True, default='')
+    enrolled_classes = models.JSONField(default=list, blank=True)
+
+    def __str__(self):
+        return self.display_name or self.user.username
+
+    def get_avatar_display(self):
+        return (self.display_name or self.user.username)[:1].upper()
+
+
+class Friendship(models.Model):
+    class Status(models.TextChoices):
+        PENDING = 'pending', 'Pending'
+        ACCEPTED = 'accepted', 'Accepted'
+
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='friendships')
+    friend = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='friended_by')
+    status = models.CharField(max_length=10, choices=Status.choices, default=Status.ACCEPTED)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+        constraints = [models.UniqueConstraint(fields=['user', 'friend'], name='unique_friendship')]
+
+    def __str__(self):
+        return f'{self.user.username} -> {self.friend.username} ({self.status})'
+
+
+class ChatMessage(models.Model):
+    sender = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='sent_messages')
+    meet = models.ForeignKey(Meet, on_delete=models.CASCADE, null=True, blank=True, related_name='chat_messages')
+    recipient = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True, related_name='direct_messages')
+    text = models.TextField(max_length=1200)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['created_at', 'pk']
+
+    def __str__(self):
+        dest = f'Meet #{self.meet_id}' if self.meet_id else f'User #{self.recipient_id}'
+        return f'{self.sender.username} to {dest}: {self.text[:30]}'

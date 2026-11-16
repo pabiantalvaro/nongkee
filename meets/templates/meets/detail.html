@@ -1,48 +1,98 @@
 <div class="meet-detail{% if detail.is_host or detail.member.status == 'joined' %} joined{% endif %}" data-joined="{% if detail.is_host or detail.member.status == 'joined' %}yes{% endif %}">
-  <h2 class="m" id="mt">{{ detail.meet.title }}</h2>
-  <div class="m" id="ms">{{ detail.meet.get_topic_display }} · {{ detail.meet.get_join_mode_display }}</div>
-  <div class="m" id="mr">📍 {{ detail.meet.room }}<br>{{ detail.day_label }}, {{ detail.meet.date|date:'j M Y' }} · {{ detail.meet.get_window_display }} WIB</div>
-  <div id="detailAction">
-    {% if not request.user.is_authenticated and detail.active %}
-      <a id="btn" href="{% url 'meets:login' %}?next={% url 'meets:home' %}%3Fmeet%3D{{ detail.meet.pk }}">Sign in to join</a>
-    {% elif detail.active or detail.member %}
-      <form method="post" action="{% url 'meets:act' detail.meet.pk %}"{% if detail.is_host %} data-confirm="Cancel this meet for everyone?"{% endif %}>
-        {% csrf_token %}
-        <input type="hidden" name="page" value="{{ page|default:'home' }}">
-        {% if detail.is_host %}
-          <button id="btn" name="action" value="cancel">Cancel meet</button>
-        {% elif detail.member %}
-          <button id="btn" name="action" value="leave">{% if detail.member.status == 'pending' %}Withdraw request{% else %}Leave{% endif %}</button>
-          {% if detail.member.status == 'pending' %}<span class="membership-status">Awaiting host approval</span>{% endif %}
-        {% else %}
-          <button id="btn" name="action" value="join">{% if detail.meet.join_mode == 'approval' %}Request to join{% else %}Join{% endif %}</button>
-        {% endif %}
-      </form>
-    {% else %}
-      <p class="membership-status">This meet has ended.</p>
-    {% endif %}
-  </div>
-  <div id="host"><div class="av" aria-hidden="true">{{ detail.meet.host.get_username|first|upper }}</div><p>Host · {{ detail.meet.host.get_username }}</p></div>
-  <div class="detail-people">
-    <h3 id="ma">Attendees</h3>
-    <div id="att">
-      <div class="at"><div class="av" aria-hidden="true">{{ detail.meet.host.get_username|first|upper }}</div><p>{{ detail.meet.host.get_username }}</p></div>
-      {% for member in detail.attendees %}<div class="at"><div class="av{% if member.user == request.user %} me{% endif %}" aria-hidden="true">{{ member.user.get_username|first|upper }}</div><p>{{ member.user.get_username }}</p></div>{% endfor %}
-    </div>
-    {% if detail.is_host and detail.active and detail.pending %}
-      <section class="requests">
-        <h3>Join requests</h3>
-        {% for member in detail.pending %}
-          <form method="post" action="{% url 'meets:act' detail.meet.pk %}">
+  <div class="meet-detail-grid">
+    <!-- Left column: Information & People -->
+    <div class="meet-left-col">
+      <div class="meet-heading-wrap">
+        <h2 id="mt">{{ detail.meet.title }}</h2>
+        <div id="ms">{{ detail.meet.get_topic_display }} · {{ detail.meet.get_join_mode_display }}</div>
+        <div id="mr">📍 {{ detail.meet.room }}<br>{{ detail.day_label }}, {{ detail.meet.date|date:'j M Y' }} · {{ detail.meet.get_window_display }} WIB</div>
+      </div>
+
+      <div id="detailAction" class="meet-action-wrap">
+        {% if not request.user.is_authenticated and detail.active %}
+          <a id="btn" href="{% url 'meets:login' %}?next={% url 'meets:home' %}%3Fmeet%3D{{ detail.meet.pk }}">Sign in to join</a>
+        {% elif detail.active or detail.member %}
+          <form method="post" action="{% url 'meets:act' detail.meet.pk %}"{% if detail.is_host %} data-confirm="Cancel this meet for everyone?"{% endif %}>
             {% csrf_token %}
             <input type="hidden" name="page" value="{{ page|default:'home' }}">
-            <input type="hidden" name="member" value="{{ member.pk }}">
-            <span>{{ member.user.get_username }}</span>
-            <button class="mini-pill" name="action" value="approve">Approve</button>
-            <button class="mini-pill" name="action" value="decline">Decline</button>
+            {% if detail.is_host %}
+              <button id="btn" name="action" value="cancel" class="cancel-meet-btn">Cancel meet</button>
+            {% elif detail.member %}
+              <button id="btn" name="action" value="leave">{% if detail.member.status == 'pending' %}Withdraw request{% else %}Leave meet{% endif %}</button>
+              {% if detail.member.status == 'pending' %}<span class="membership-status">Awaiting host approval</span>{% endif %}
+            {% else %}
+              <button id="btn" name="action" value="join">{% if detail.meet.join_mode == 'approval' %}Request to join{% else %}Join meet{% endif %}</button>
+            {% endif %}
           </form>
-        {% endfor %}
-      </section>
-    {% endif %}
+        {% else %}
+          <p class="membership-status">This meet has ended.</p>
+        {% endif %}
+      </div>
+
+      <div class="detail-people">
+        <h3 id="ma">Attendees ({{ detail.attendees|length|add:1 }})</h3>
+        <div id="att">
+          <div class="at">
+            <div class="av" aria-hidden="true">{{ detail.meet.host.get_username|first|upper }}</div>
+            <p>{{ detail.meet.host.get_username }} <span class="host-pill-small">Host</span></p>
+          </div>
+          {% for member in detail.attendees %}
+            <div class="at">
+              <div class="av{% if member.user == request.user %} me{% endif %}" aria-hidden="true">{{ member.user.get_username|first|upper }}</div>
+              <p>{{ member.user.get_username }}</p>
+            </div>
+          {% endfor %}
+        </div>
+
+        {% if detail.is_host and detail.active and detail.pending %}
+          <section class="requests">
+            <h3>Join requests</h3>
+            {% for member in detail.pending %}
+              <form method="post" action="{% url 'meets:act' detail.meet.pk %}">
+                {% csrf_token %}
+                <input type="hidden" name="page" value="{{ page|default:'home' }}">
+                <input type="hidden" name="member" value="{{ member.pk }}">
+                <span>{{ member.user.get_username }}</span>
+                <button class="mini-pill" name="action" value="approve">Approve</button>
+                <button class="mini-pill" name="action" value="decline">Decline</button>
+              </form>
+            {% endfor %}
+          </section>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Right column: Host Info & Meet Chat -->
+    <div class="meet-right-col">
+      <div id="host" class="host-card">
+        <div class="av host-avatar-large" aria-hidden="true">{{ detail.meet.host.get_username|first|upper }}</div>
+        <div class="host-text">
+          <span class="host-label">Meet Host</span>
+          <p class="host-username">{{ detail.meet.host.get_username }}</p>
+        </div>
+      </div>
+
+      <div class="meet-chat-section" data-meet-id="{{ detail.meet.pk }}">
+        <div class="meet-chat-header">
+          <h3 id="mcTitle">Meet Chat</h3>
+          <span class="chat-hint">Live coordination</span>
+        </div>
+        <div class="meet-chat-box" id="meetChatBox">
+          <div class="chat-empty-msg">No messages yet. Say hi to fellow nongkeers!</div>
+        </div>
+        {% if detail.is_host or detail.member.status == 'joined' %}
+          <form class="meet-chat-form" id="meetChatForm">
+            {% csrf_token %}
+            <input type="hidden" name="meet_id" value="{{ detail.meet.pk }}">
+            <input type="text" name="text" class="meet-chat-input" placeholder="Type a message..." required autocomplete="off">
+            <button type="submit" class="meet-chat-send" aria-label="Send message">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+          </form>
+        {% else %}
+          <p class="meet-chat-locked">Join this meet to participate in chat.</p>
+        {% endif %}
+      </div>
+    </div>
   </div>
 </div>

@@ -5,19 +5,104 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if signup %}Create account{% else %}Sign in{% endif %} · nongkee</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'meets/nongkee.css' %}">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body class="auth-page">
   <main class="auth-card">
     <a class="auth-brand" href="{% url 'meets:home' %}">nongkee</a>
     <h1>{% if signup %}Create account{% else %}Sign in{% endif %}</h1>
+
+    <!-- Official Google Identity Services (GIS) Section -->
+    <div class="google-auth-box">
+      <div class="auth-sublabel">Official Google OAuth:</div>
+      <div id="g_id_onload"
+           data-client_id="93654965-demo-nongkee.apps.googleusercontent.com"
+           data-callback="handleGoogleCredential"
+           data-auto_prompt="false">
+      </div>
+      <div class="g_id_signin"
+           data-type="standard"
+           data-shape="pill"
+           data-theme="outline"
+           data-text="signin_with"
+           data-size="large"
+           data-logo_alignment="left"
+           data-width="360">
+      </div>
+
+      <!-- Quick Demo Login Section -->
+      <div class="demo-login-box">
+        <div class="auth-sublabel">⚡ Local Demo Sign-In (No Google Client ID needed):</div>
+        <form id="googleQuickForm" action="{% url 'meets:google_auth' %}" method="post" class="google-quick-form">
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{{ next|default:'/' }}">
+          <div class="demo-select-row">
+            <select name="demo_email" class="demo-email-select">
+              <option value="fabian.alvaro@ui.ac.id">fabian.alvaro@ui.ac.id (Bian)</option>
+              <option value="imanuel.arya@ui.ac.id">imanuel.arya@ui.ac.id (Imanuel)</option>
+              <option value="nonapacil@ui.ac.id">nonapacil@ui.ac.id (Nona Pacil)</option>
+              <option value="cryinfairys@ui.ac.id">cryinfairys@ui.ac.id (Hana)</option>
+              <option value="maiza.raditya@ui.ac.id">maiza.raditya@ui.ac.id (Maiza)</option>
+            </select>
+            <button type="submit" class="demo-login-btn">Test Login</button>
+          </div>
+          <p class="demo-helper">Persistent session active: you will stay logged in until you click "Sign out".</p>
+        </form>
+      </div>
+    </div>
+
+    <div class="auth-divider"><span>or sign in with password</span></div>
+
     <form method="post">
       {% csrf_token %}
       {{ form.as_p }}
       {% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}
       <button class="launch-btn" type="submit">{% if signup %}Create account{% else %}Sign in{% endif %}</button>
     </form>
-    {% if signup %}<a href="{% url 'meets:login' %}{% if next %}?next={{ next|urlencode:'' }}{% endif %}">Already have an account?</a>{% else %}<a href="{% url 'meets:signup' %}{% if next %}?next={{ next|urlencode:'' }}{% endif %}">Create an account</a>{% endif %}
+
+    <div class="auth-footer-links">
+      {% if signup %}
+        <a href="{% url 'meets:login' %}{% if next %}?next={{ next|urlencode:'' }}{% endif %}">Already have an account? Sign in</a>
+      {% else %}
+        <a href="{% url 'meets:signup' %}{% if next %}?next={{ next|urlencode:'' }}{% endif %}">New here? Create an account</a>
+      {% endif %}
+    </div>
   </main>
+
+  <script>
+    function handleGoogleCredential(response) {
+      if (!response || !response.credential) return;
+      var form = document.createElement('form');
+      form.method = 'POST';
+      form.action = "{% url 'meets:google_auth' %}";
+      
+      var csrf = document.querySelector('input[name=csrfmiddlewaretoken]');
+      if (csrf) {
+        var inputCsrf = document.createElement('input');
+        inputCsrf.type = 'hidden';
+        inputCsrf.name = 'csrfmiddlewaretoken';
+        inputCsrf.value = csrf.value;
+        form.appendChild(inputCsrf);
+      }
+
+      var inputToken = document.createElement('input');
+      inputToken.type = 'hidden';
+      inputToken.name = 'credential';
+      inputToken.value = response.credential;
+      form.appendChild(inputToken);
+
+      var next = "{{ next|default:'/' }}";
+      var inputNext = document.createElement('input');
+      inputNext.type = 'hidden';
+      inputNext.name = 'next';
+      inputNext.value = next;
+      form.appendChild(inputNext);
+
+      document.body.appendChild(form);
+      form.submit();
+    }
+  </script>
 </body>
 </html>
