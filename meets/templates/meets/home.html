@@ -78,54 +78,7 @@
     </main>
   {% endif %}
 
-  <div id="scrim"></div>
-  <section id="modal" role="dialog" aria-modal="true" aria-labelledby="mt" tabindex="-1"{% if not detail %} hidden{% endif %}>
-    <a href="{{ request.path }}" class="close-btn detail-close" id="closeDetail" aria-label="Close meet details">×</a>
-    <div id="detailContent">{% if detail %}{% include 'meets/detail.html' %}{% endif %}</div>
-  </section>
-
-  {% if user.is_authenticated %}
-    <form id="createModal" action="{% url 'meets:create' %}" method="post" role="dialog" aria-modal="true" aria-labelledby="createTitle" hidden>
-      {% csrf_token %}
-      <div class="modal-header">
-        <div><h2 id="createTitle">Start a Meet</h2><p>Choose an empty classroom or spot in Pacil to hang out or study</p></div>
-        <button type="button" class="close-btn" id="closeCreateBtn" aria-label="Close start a meet">×</button>
-      </div>
-      <div class="create-body">
-        <div class="left-pane">
-          <div class="field-group">
-            <label class="field-label" for="newTitle">Meet Title</label>
-            <input type="text" name="title" class="input-txt" id="newTitle" maxlength="100" required placeholder="e.g. Belajar DAA bareng, PBP Sprint...">
-          </div>
-          <fieldset class="field-group radio-group">
-            <legend class="field-label">Topic / Category</legend>
-            <div class="topic-pills">
-              {% for value, label in topics %}<label><input type="radio" name="topic" value="{{ value }}"{% if forloop.first %} checked{% endif %}><span class="topic-pill">{{ label }}</span></label>{% endfor %}
-            </div>
-          </fieldset>
-          <div class="field-group">
-            <label class="field-label" for="joinMode">Who can join?</label>
-            <select id="joinMode" name="join_mode" class="input-txt">{% for value, label in join_modes %}<option value="{{ value }}">{{ label }}</option>{% endfor %}</select>
-          </div>
-          <div class="field-group">
-            <span class="field-label">Host</span>
-            <div class="host-preview"><div class="av" aria-hidden="true">{{ user.get_username|first|upper }}</div><strong>{{ user.get_username }}</strong></div>
-          </div>
-        </div>
-        <div class="right-pane">
-          <div class="field-label room-heading">Choose an Available Room <span id="availCount" aria-live="polite"></span></div>
-          <div class="filter-bar" id="createFilters">{% include 'meets/room_filters.html' with picker=True %}</div>
-          <input type="hidden" name="room" id="selectedRoom">
-          <div class="room-scroll-box" id="roomScrollBox"></div>
-        </div>
-      </div>
-      <p class="form-error" id="createError" role="alert" hidden></p>
-      <div class="create-bottom">
-        <div class="selected-summary"><span>Selected Room:</span><b id="summaryRoomName">Belum dipilih</b></div>
-        <button type="submit" class="launch-btn" id="launchMeetBtn" disabled>Start Meet <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-      </div>
-    </form>
-  {% endif %}
+  {% include 'meets/modals.html' %}
 </div>
 </body>
 </html>

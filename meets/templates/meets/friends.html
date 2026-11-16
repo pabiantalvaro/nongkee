@@ -10,7 +10,7 @@
   <script src="{% static 'meets/nongkee.js' %}" defer></script>
 </head>
 <body>
-<div id="stage" class="stage friends-stage" data-chat-url="{% url 'meets:chat_messages' %}">
+<div id="stage" class="stage friends-stage{% if detail %} open-detail{% endif %}" data-room-options="{% url 'meets:room_options' %}" data-chat-url="{% url 'meets:chat_messages' %}" data-page="friends">
   <header>
     <a href="{% url 'meets:home' %}" aria-label="nongkee home">
       <svg class="logo" width="98" height="72" viewBox="0 0 98 72" fill="none" stroke="#2ccf72" stroke-width="3.5" stroke-linecap="round" aria-hidden="true">
@@ -161,7 +161,7 @@
               {% endif %}
 
               {% if item.status.state == 'meet' and item.status.meet_id %}
-                <a class="view-meet-btn" href="{% url 'meets:home' %}?meet={{ item.status.meet_id }}">Lihat Meet</a>
+                <button type="button" class="view-meet-btn" data-detail-url="{% url 'meets:detail' item.status.meet_id %}" data-meet-href="{% url 'meets:home' %}?meet={{ item.status.meet_id }}">Lihat Meet</button>
               {% elif item.status.state == 'free' and authenticated %}
                 <button type="button" class="ajak-btn" data-invite-user="{{ item.user.username }}">+ Ajak Nongkee</button>
               {% endif %}
@@ -205,7 +205,7 @@
     <section id="tabMeets" class="tab-panel" role="tabpanel" hidden>
       <div class="my-meets-grid">
         {% for item in my_meets %}
-          <a class="card mine" href="{% url 'meets:home' %}?meet={{ item.meet.pk }}">
+          <a class="card mine" href="{% url 'meets:home' %}?meet={{ item.meet.pk }}" data-detail-url="{% url 'meets:detail' item.meet.pk %}" data-meet-href="{% url 'meets:home' %}?meet={{ item.meet.pk }}">
             <div class="avs" aria-hidden="true">
               {% for attendee in item.avatars|slice:':3' %}<div class="av{% if forloop.first %} big{% endif %}{% if attendee == user %} me{% endif %}">{{ attendee.get_username|first|upper }}</div>{% endfor %}
               {% if item.extra %}<span class="cnt">+{{ item.extra }}</span>{% endif %}
@@ -250,6 +250,8 @@
       </button>
     </form>
   </aside>
+
+  {% include 'meets/modals.html' %}
 </div>
 </body>
 </html>

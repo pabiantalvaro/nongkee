@@ -152,7 +152,7 @@ def create(request):
 def act(request, pk):
     action = request.POST.get('action')
     page = request.POST.get('page')
-    destination = reverse(f'meets:{page}' if page in ('mine', 'rooms_page') else 'meets:home')
+    destination = reverse(f'meets:{page}' if page in ('mine', 'rooms_page', 'friends') else 'meets:home')
     with transaction.atomic():
         meet = get_object_or_404(Meet.objects.select_for_update(), pk=pk)
         is_host = meet.host_id == request.user.pk
@@ -203,6 +203,30 @@ def signup(request):
 
 @require_GET
 def friends_view(request):
+    date, window = initial_slot()
+    today = timezone.localdate()
+    days = [today + timedelta(days=offset) for offset in range(7)]
+    day_options = [(day, DAYS[day.weekday()]) for day in days if day.weekday() < len(DAYS)]
+
+    detail = None
+    selected = request.GET.get('meet', '')
+    if selected.isascii() and selected.isdecimal() and len(selected) <= 18:
+        meet = meet_queryset().filter(pk=int(selected)).first()
+        if meet:
+            detail = detail_context(meet, request.user)
+
+    shared_context = {
+        'page': 'friends',
+        'detail': detail,
+        'date': date,
+        'window': window,
+        'day_options': day_options,
+        'windows': Meet.Window.choices,
+        'topics': Meet.Topic.choices,
+        'join_modes': Meet.JoinMode.choices,
+        'buildings': BUILDINGS,
+    }
+
     if not request.user.is_authenticated:
         demo_profiles = UserProfile.objects.select_related('user').all()[:8]
         demo_list = []
@@ -213,6 +237,7 @@ def friends_view(request):
                 'status': get_user_status(p.user),
             })
         return render(request, 'meets/friends.html', {
+            **shared_context,
             'authenticated': False,
             'friends': demo_list,
             'my_meets': [],
@@ -265,6 +290,7 @@ def friends_view(request):
         my_meets_list.append(details)
 
     return render(request, 'meets/friends.html', {
+        **shared_context,
         'authenticated': True,
         'friends': friends_list,
         'pending_requests': pending_incoming,

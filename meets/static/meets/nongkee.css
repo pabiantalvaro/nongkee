@@ -62,6 +62,12 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Force standard hidden attribute to override all class-based displays */
+[hidden] {
+  display: none !important;
+  pointer-events: none !important;
+}
+
 /* Hide legacy fake wireframe lines */
 .frame, #fade {
   display: none !important;
@@ -1612,6 +1618,11 @@ select.mini-pill {
   z-index: 100;
   display: flex;
   flex-direction: column;
+}
+
+.chat-drawer[hidden] {
+  display: none !important;
+  pointer-events: none !important;
 }
 
 .chat-drawer-header {
