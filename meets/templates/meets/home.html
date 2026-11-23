@@ -80,5 +80,18 @@
 
   {% include 'meets/modals.html' %}
 </div>
+{% if user.is_authenticated %}
+<script>
+  try {
+    localStorage.setItem('nongkee_saved_profile', JSON.stringify({
+      email: "{{ user.email|default:user.username }}",
+      name: "{{ user.profile.display_name|default:user.username }}",
+      avatar: "{{ user.profile.avatar_url|default:'' }}",
+      username: "{{ user.username }}",
+      updatedAt: new Date().toISOString()
+    }));
+  } catch (e) {}
+</script>
+{% endif %}
 </body>
 </html>

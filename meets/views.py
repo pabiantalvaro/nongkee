@@ -444,9 +444,9 @@ def google_auth(request):
         user.save()
 
     profile, _ = UserProfile.objects.get_or_create(user=user)
-    if name and not profile.display_name:
+    if name:
         profile.display_name = name
-    if picture and not profile.avatar_url:
+    if picture:
         profile.avatar_url = picture
     profile.save()
 

@@ -1,19 +1,12 @@
 {
   "hosting": {
-    "public": "meets/static",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
-      {
-        "source": "**",
-        "run": {
-          "serviceId": "nongkee",
-          "region": "asia-southeast1"
-        }
-      }
-    ]
+    "cleanUrls": true,
+    "trailingSlash": false
   }
 }

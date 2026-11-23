@@ -3,6 +3,9 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# Firebase cache
+.firebase/
+
 # C extensions
 *.so
 

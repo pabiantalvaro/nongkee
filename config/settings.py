@@ -25,7 +25,14 @@ SECRET_KEY = 'django-insecure-s%_ocjtbsu&3tuvruue@37952_jly3da8-hfg&u_w_y!e@2y50
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://nongkee.web.app',
+    'https://nongkee.firebaseapp.com',
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
+]
 
 
 # Application definition
