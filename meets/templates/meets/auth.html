@@ -129,6 +129,23 @@
 
   <script>
     const savedProfileKey = 'nongkee_saved_profile';
+    const isStatic = window.location.hostname.includes('web.app') || window.location.hostname.includes('firebaseapp.com') || window.location.protocol === 'file:';
+
+    function handleLoginSuccess(user, redirectUrl) {
+      if (isStatic) {
+        localStorage.setItem('nongkee_auth_user', JSON.stringify(user));
+        localStorage.setItem(savedProfileKey, JSON.stringify({
+          email: user.email,
+          name: user.name,
+          avatar: user.avatar || '',
+          username: user.username,
+          updatedAt: new Date().toISOString()
+        }));
+        location.assign(redirectUrl || '/');
+        return true;
+      }
+      return false;
+    }
 
     // 1. Check & render Saved Profile Card
     function checkSavedProfile() {
@@ -179,21 +196,36 @@
     function handleGoogleCredential(response) {
       if (!response || !response.credential) return;
 
+      let email = '', name = '', picture = '';
       try {
         // Decode Google JWT
         const base64Url = response.credential.split('.')[1];
         const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
         const jsonPayload = decodeURIComponent(atob(base64).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
         const payload = JSON.parse(jsonPayload);
-        if (payload.email) {
+        email = payload.email || '';
+        name = payload.name || payload.given_name || (email ? email.split('@')[0] : '');
+        picture = payload.picture || '';
+        if (email) {
           localStorage.setItem(savedProfileKey, JSON.stringify({
-            email: payload.email,
-            name: payload.name || payload.given_name || payload.email.split('@')[0],
-            avatar: payload.picture || '',
+            email: email,
+            name: name,
+            avatar: picture,
             updatedAt: new Date().toISOString()
           }));
         }
       } catch (e) {}
+
+      // If running on static Firebase Hosting, bypass POST route and log in directly
+      if (isStatic && email) {
+        handleLoginSuccess({
+          email: email,
+          name: name,
+          username: email.split('@')[0],
+          avatar: picture
+        }, "{{ next|default:'/' }}");
+        return;
+      }
 
       var form = document.createElement('form');
       form.method = 'POST';
@@ -225,15 +257,28 @@
       form.submit();
     }
 
-    // 3. Save profile on Demo submit
-    document.querySelector('#googleQuickForm')?.addEventListener('submit', function() {
+    // 3. Save profile & handle Demo submit
+    document.querySelector('#googleQuickForm')?.addEventListener('submit', function(e) {
       const sel = document.querySelector('#demoEmailSelect');
       if (sel && sel.value) {
         const text = sel.options[sel.selectedIndex].text;
         const nameMatch = text.match(/\(([^)]+)\)/);
         const displayName = nameMatch ? nameMatch[1] : sel.value.split('@')[0];
+        const email = sel.value;
+
+        if (isStatic) {
+          e.preventDefault();
+          handleLoginSuccess({
+            email: email,
+            name: displayName,
+            username: email.split('@')[0],
+            avatar: ''
+          }, "{{ next|default:'/' }}");
+          return;
+        }
+
         localStorage.setItem(savedProfileKey, JSON.stringify({
-          email: sel.value,
+          email: email,
           name: displayName,
           avatar: '',
           updatedAt: new Date().toISOString()
@@ -241,7 +286,24 @@
       }
     });
 
-    // 4. Save profile on password submit
+    // 4. Saved Profile form submit
+    document.querySelector('#savedProfileForm')?.addEventListener('submit', function(e) {
+      if (isStatic) {
+        e.preventDefault();
+        const raw = localStorage.getItem(savedProfileKey);
+        const p = raw ? JSON.parse(raw) : null;
+        const email = document.querySelector('#savedFormEmail')?.value || p?.email || 'fabian.alvaro@ui.ac.id';
+        const name = p?.name || email.split('@')[0];
+        handleLoginSuccess({
+          email: email,
+          name: name,
+          username: email.split('@')[0],
+          avatar: p?.avatar || ''
+        }, "{{ next|default:'/' }}");
+      }
+    });
+
+    // 5. Save profile on password submit
     document.querySelector('#passwordAuthForm')?.addEventListener('submit', function() {
       const userField = document.querySelector('#id_username');
       if (userField && userField.value) {
@@ -254,7 +316,7 @@
       }
     });
 
-    // 5. Saved Profile actions
+    // 6. Saved Profile actions
     document.querySelector('#switchAccountBtn')?.addEventListener('click', function() {
       const other = document.querySelector('#otherAuthOptions');
       if (other) {

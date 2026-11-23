@@ -520,3 +520,34 @@ if (chatSendForm) {
     } catch (e) {}
   });
 }
+
+// --------------------------------------------------------------------------
+// Client-side Auth Hydrator (for static Firebase Hosting on nongkee.web.app)
+// --------------------------------------------------------------------------
+function initClientAuth() {
+  const isStatic = window.location.hostname.includes('web.app') || window.location.hostname.includes('firebaseapp.com') || window.location.protocol === 'file:';
+  const raw = localStorage.getItem('nongkee_auth_user');
+  if (isStatic && raw) {
+    try {
+      const user = JSON.parse(raw);
+      const whoEl = document.querySelector('header .who');
+      const avEl = document.querySelector('header .me-av');
+      if (whoEl) {
+        whoEl.innerHTML = `
+          <b>${user.name || user.username}</b>
+          <button type="button" class="text-button" id="clientLogoutBtn" style="margin-left: 8px;">Sign out</button>
+        `;
+        document.querySelector('#clientLogoutBtn')?.addEventListener('click', () => {
+          localStorage.removeItem('nongkee_auth_user');
+          location.reload();
+        });
+      }
+      if (avEl) {
+        avEl.textContent = (user.name || user.username || '?')[0].toUpperCase();
+      }
+    } catch (e) {}
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initClientAuth);
+initClientAuth();
