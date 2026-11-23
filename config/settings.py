@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -69,6 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'meets.context_processors.nongkee_globals',
             ],
         },
     },
@@ -128,8 +130,8 @@ SESSION_COOKIE_AGE = 60 * 60 * 24 * 365  # 1 year in seconds
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 SESSION_SAVE_EVERY_REQUEST = True
 
-# Google OAuth Client ID (optional config, demo fallback enabled)
-GOOGLE_CLIENT_ID = '93654965-demo-nongkee.apps.googleusercontent.com'
+# Google OAuth Client ID (read from environment or config)
+GOOGLE_CLIENT_ID = os.environ.get('GOOGLE_CLIENT_ID', '93654965-demo-nongkee.apps.googleusercontent.com')
 
 
 # Static files (CSS, JavaScript, Images)
