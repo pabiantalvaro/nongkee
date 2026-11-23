@@ -1976,6 +1976,12 @@ select.mini-pill {
   color: #92400e;
 }
 
+.oauth-notice.success {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #065f46;
+}
+
 .instant-google-btn {
   display: inline-flex;
   align-items: center;

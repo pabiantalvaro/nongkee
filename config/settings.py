@@ -131,7 +131,7 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 SESSION_SAVE_EVERY_REQUEST = True
 
 # Google OAuth Client ID (read from environment or config)
-GOOGLE_CLIENT_ID = os.environ.get('GOOGLE_CLIENT_ID', '93654965-demo-nongkee.apps.googleusercontent.com')
+GOOGLE_CLIENT_ID = os.environ.get('GOOGLE_CLIENT_ID', '510428325728-a6jpbtd1l0atbk5jbeqrmqucivsmk6e1.apps.googleusercontent.com')
 
 
 # Static files (CSS, JavaScript, Images)
